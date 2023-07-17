@@ -1,9 +1,7 @@
 @use "global" as *;
 
 .button {
-  // background-color: $accent-color;
-  // border: 1px solid $accent-color;
-  // width: rem(202);
+
 
 }
 
@@ -18,9 +16,12 @@
   text-align: center;
   position: relative;
   transition: 0.3s ease-in-out;
-  width: rem(202);
+  width: 206px;
   background-color: $accent-color;
   border: 1px solid $accent-color;
+
+   @include mq('md') {
+   }
 }
 
 /*  重なり部分 */
