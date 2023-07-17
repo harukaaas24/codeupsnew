@@ -62,11 +62,16 @@
 }
 
 .top-about__sango {
-  width: rem(194);
-  height: rem(181);
-  position: absolute;
-  right: -9vw;
-  bottom: -20.8vw;
+  display: none;
+  @include mq('md') {
+    display: block;
+     width: rem(194);
+     height: rem(181);
+     position: absolute;
+     right: -9vw;
+     bottom: -20.8vw;
+     overflow: hidden;
+   }
 }
 
 /* スマホ

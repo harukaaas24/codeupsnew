@@ -34,7 +34,7 @@
   right: -4px;
   left: 4px;
   border: solid 1px $accent-color;
-  z-index: -1;
+  z-index: 1;
   transition: inherit; /* 親要素のトランジションを継承する */
 }
 

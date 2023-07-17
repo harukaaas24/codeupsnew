@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.voice-card {
+}
+
+.top-voice__wrapper {
+  max-width: rem(345);
+  width: 100%;
+  margin: 0 auto;
+
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+    max-width: rem(1080);
+  }
+}
+
+.top-voice__item:last-child {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: 0;
+  }
+}

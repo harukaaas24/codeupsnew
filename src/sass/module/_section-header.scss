@@ -10,7 +10,7 @@
   font-size: rem(32);
   color: $green;
   line-height: calc(40 / 32);
-font-weight: $regular;
+  font-weight: $regular;
   @include mq("md") {
     font-size: rem(40);
     line-height: 1;
@@ -20,6 +20,17 @@ font-weight: $regular;
 .section-header__title::first-letter {
   color: $accent-color;
 }
+.section-header__title--white {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.section-header__title--white::first-letter {
+  @include mq("md") {
+    color: $white;
+  }
+}
 
 .section-header__text {
   font-family: $base-font-family;
@@ -28,5 +39,11 @@ font-weight: $regular;
   color: $accent-color;
   // text-align: center;
   padding-top: rem(4);
-  font-weight:$regular;
+  font-weight: $regular;
+}
+
+.section-header__text--white {
+  @include mq("md") {
+    color: $white;
+  }
 }

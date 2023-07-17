@@ -1,7 +1,14 @@
 @use "global" as *;
 
 .top-info {
-  margin-top: 50%;
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+  background: #ddf0f1;
+  @include mq("md") {
+    margin-top: 50%;
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+  }
 }
 
 .top-info__wrapper {
@@ -9,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: rem(40);
   }
 }
 
@@ -31,7 +39,7 @@
   margin-top: rem(24);
 
   @include mq("md") {
-    width: calc(45% - 48px / 2);
+    width: calc(48% - 48px / 2);
     margin-top: 0;
   }
 }
@@ -45,6 +53,9 @@
   border-bottom: 1px solid $accent-color;
 
   @include mq("md") {
+    font-size:  rem(24);
+    line-height: 1;
+    padding-bottom: rem(8);
   }
 }
 
@@ -52,4 +63,13 @@
   font-size: rem(16);
   line-height: calc(24 / 16);
   color: $green;
+
+   @include mq('md') {
+    padding-top: rem(8);
+   }
+}
+
+.top-info__button {
+  text-align: center;
+  margin-top: rem(40);
 }

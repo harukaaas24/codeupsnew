@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.top-blog {
+  padding-top: rem(80);
+
+  @include mq("md") {
+    padding-top: rem(100);
+  }
+}
+
+.top-blog__bg {
+  @include mq("md") {
+    position: relative;
+    width: 100%;
+    z-index: -5;
+
+  }
+}
+
+.top-blog__bg::before {
+
+   @include mq('md') {
+     content: "";
+     height: 34.7222vw;
+     background-image: url(../../assets/images/common/blog-bg.jpg);
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     top: 0;
+     width: inherit;
+     position: absolute;
+   }
+}
+
+.top-blog__wrapper {
+
+  text-align: center;
+
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(80);
+  }
+}
