@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.scroll-button__wrapper {
+  right: rem(180);
+  display: inline-block;
+  position: absolute;
+  top:  rem(10);
+
+}
+
+.scroll-button {
+  display: none; /* 初期状態ではボタンを非表示にする */
+
+  @include mq("md") {
+    transform: translateY(-50%);
+    width: rem(80);
+    height: rem(80);
+    border: none;
+
+    color: #fff;
+
+    cursor: pointer;
+    display: inline-block;
+  }
+}
+
+
+.scroll-button-next {
+  margin-left: rem(80);
+}

@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.hamburger {
+  z-index: 9999;
+  pointer-events: auto;
+  width: rem(32);
+  height:  rem(24);
+  padding: 0;
+
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.hamburger span {
+  position: relative;
+  display: block;
+  height: rem(2);
+  width:  100%;
+  background: $white;
+  transition: ease 0.3s;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  margin: 0.4rem 0;
+}
+
+.hamburger span:nth-child(3) {
+  top: 0;
+}
+
+/*is-OPEN時の動き*/
+.hamburger.is-open span:nth-child(1) {
+  top: 0.5rem;
+  transform: rotate(45deg);
+}
+
+.hamburger.is-open span:nth-child(2) {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.hamburger.is-open span:nth-child(3) {
+  top: -0.7rem;
+  transform: rotate(-45deg);
+}

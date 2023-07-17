@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.campaign-cards {
+  overflow-x: scroll; /* 横方向のスクロールバーを表示 */
+  white-space: nowrap; /* カードを横並びに配置するために改行を抑制 */
+
+}
+
+.campaign-cards__item{
+  display: inline-block; /* カードを横並びに配置 */
+  margin-right:  rem(24); /* カード間の余白を設定 */
+
+}
+
+.campaign-cards {
+  overflow-x: auto; /* PCの場合はスクロールバーを表示 */
+  overflow-y: scroll; /* スマホの場合もスクロールができるようにする */
+  -webkit-overflow-scrolling: touch; /* スムーズなスクロールを有効にする（iOS向け） */
+  white-space: nowrap;
+  position: relative;
+
+   @include mq('md') {
+   }
+}
+
+.campaign-cards::-webkit-scrollbar {
+  display: none; /* スクロールバーを非表示にする */
+}
+

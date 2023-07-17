@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.header {
+  height: rem(80);
+  background: rgba(13, 41, 54, 0.68);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998;
+  // 動き
+  transition: 1s;
+
+   @include mq('md') {  
+    height: rem(90);
+
+   }
+}
+
+.header__inner {
+  height: inherit;
+  display: flex;
+  padding: 0 rem(15);
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq("md") {
+    padding: 0 rem(40);
+  }
+}
+
+.header__logo {
+  width: rem(102);
+  height: rem(38);
+  z-index: 9999;
+  position: relative;
+
+  @include mq("md") {
+    width: rem(133);
+    height: rem(50);
+  }
+}
+
+.header.change-color {
+  background: #9a9a9a; //スクロールしたあとのヘッダー背景色
+}
+
+

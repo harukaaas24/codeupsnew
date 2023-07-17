@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.button {
+  // background-color: $accent-color;
+  // border: 1px solid $accent-color;
+  // width: rem(202);
+
+}
+
+.button__more {
+  color: $white;
+  font-family: $title-font-family;
+  font-weight: $regular;
+  font-size: rem(14);
+  display: inline-block;
+  padding-top: rem(16);
+  padding-bottom: rem(16);
+  text-align: center;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  width: rem(202);
+  background-color: $accent-color;
+  border: 1px solid $accent-color;
+}
+
+/*  重なり部分 */
+
+.button__more::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: -4px;
+  right: -4px;
+  left: 4px;
+  border: solid 1px $accent-color;
+  z-index: -1;
+  transition: inherit; /* 親要素のトランジションを継承する */
+}
+
+.button__more svg {
+  margin-left: rem(8);
+  display: inline-block; 
+  vertical-align: middle; 
+
+}
+
+.button__more:hover {
+  background: $white;
+  color: $accent-color;
+}
+
+.button__more:hover svg path {
+  stroke: $accent-color;/* ストロークの色を変更 */
+}

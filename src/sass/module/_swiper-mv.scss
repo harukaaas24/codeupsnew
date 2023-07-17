@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.swiper-mv {
+  // height: 100vh;
+}
+
+.swiper-mv.swiper-wrapper {
+  // height: 100vh;
+}
+
+.swiper-mv.swiper-wrapper.swiper-slide {
+  // height: 100vh;
+}
+
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.swiper-mv.swiper-wrapper.swiper-slide-active .swiper-img,
+.swiper-mv.swiper-wrapper.swiper-slide-duplicate-active .swiper-img {
+  animation: zoomUp 12s linear 0s normal both;
+}
+
+.swiper-mv.swiper-wrapper .swiper-slide img {
+  height: auto;
+  width: 100%;
+}

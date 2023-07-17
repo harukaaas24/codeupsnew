@@ -1,0 +1,86 @@
+@use "global" as *;
+
+/* pcナビ
+------------------------------------- */
+
+.pc-nav {
+  height: inherit;
+  display: none;
+
+  @include mq("md") {
+    display: block;
+    max-width: rem(819);
+    width: 100%;
+  }
+}
+
+.pc-nav__items {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pc-nav__item {
+  height: inherit;
+
+}
+
+.pc-nav__item:first-child {
+  padding-left: 0;
+}
+
+.pc-nav__item:last-child {
+  padding-right: 0;
+}
+
+.pc-nav__item a {
+  height: inherit;
+  color: $white;
+  // 上下のaタグ領域を確保
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(26) 0;
+  font-size: rem(18);
+  line-height: 1;
+  position: relative;
+  font-family: $title-font-family;
+  text-transform: capitalize;
+}
+
+.pc-nav__item--faq a{
+  text-transform: uppercase;
+}
+
+.pc-nav__item a span {
+  width: 100%;
+  font-size: rem(10);
+  line-height: calc(15 / 10);
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.pc-nav__item a span:after {
+  content: "";
+  position: absolute;
+  bottom: rem(-4);
+  left: 0;
+  width: 100%;
+  height: rem(1);
+  // 透明のバーがついている
+  background: transparent;
+  transition: all 0.3s ease 0s;
+}
+
+.pc-nav__item a span:hover:after {
+  background: $white;
+}
+
+// ホバー時に字を透過させない
+.pc-nav__item a:hover {
+  opacity: 1;
+  transition: 1s;
+}
