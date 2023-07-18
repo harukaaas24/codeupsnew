@@ -3,13 +3,9 @@
   position: relative;
 }
 
-.top-campaign__inner.inner {
-  @include mq("md") {
-    max-width: 1285px;
-    margin-right: 0;
-    padding-right: 0;
-  }
-}
+// .top-campaign__inner.inner {
+
+// }
 
 .top-campaign {
   margin-top: rem(50);

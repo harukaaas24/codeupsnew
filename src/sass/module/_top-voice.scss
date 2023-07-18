@@ -25,18 +25,18 @@
 }
 
 // デコ（タツノオトシゴ）
-.top-voice__deco-pc2 {
-  width: 0.493vw;
+.top-voice__deco2-pc {
+  width: 4.93vw;
   height: auto;
   position: absolute;
-  right: -10vw;
-  bottom: -25vw;
+  right: -2vw;
+  bottom: -15vw;
 }
 
-.top-voice__item:last-child {
+.top-voice__item:nth-child(3) {
   margin-top: rem(40);
 
-  @include mq("md") {
+   @include mq('md') {
     margin-top: 0;
-  }
+   }
 }

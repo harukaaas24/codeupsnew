@@ -3,13 +3,22 @@
 .campaign-cards {
   overflow-x: scroll; /* 横方向のスクロールバーを表示 */
   white-space: nowrap; /* カードを横並びに配置するために改行を抑制 */
+  margin-right: calc(50% - 50vw);
+  margin-left: 1%;
+  margin-top: rem(24);
+  padding-bottom: rem(2);
+  padding-left: rem(2);
 
+  @include mq("md") {
+    margin-left: 12.5%;
+    margin-top: rem(40);
+ 
+  }
 }
 
-.campaign-cards__item{
+.campaign-cards__item {
   display: inline-block; /* カードを横並びに配置 */
-  margin-right:  rem(24); /* カード間の余白を設定 */
-
+  margin-right: rem(24); /* カード間の余白を設定 */
 }
 
 .campaign-cards {
@@ -19,11 +28,10 @@
   white-space: nowrap;
   position: relative;
 
-   @include mq('md') {
-   }
+  @include mq("md") {
+  }
 }
 
 .campaign-cards::-webkit-scrollbar {
   display: none; /* スクロールバーを非表示にする */
 }
-
