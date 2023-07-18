@@ -3,7 +3,7 @@
 
 .sns-icon{
 display: flex;
-gap:  rem(18.25);
+gap:  rem(16);
 
    @include mq('md') {
     gap:  rem(16);

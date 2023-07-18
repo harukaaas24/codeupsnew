@@ -1,11 +1,10 @@
 @use "global" as *;
 
 .button {
-
-
+  position: relative;
 }
 
-.button__more {
+.button__more.slide {
   color: $white;
   font-family: $title-font-family;
   font-weight: $regular;
@@ -16,40 +15,70 @@
   text-align: center;
   position: relative;
   transition: 0.3s ease-in-out;
-  width: 206px;
+  width: rem(202);
   background-color: $accent-color;
   border: 1px solid $accent-color;
+  overflow: hidden;
+  z-index: 1;
+  margin-right: 4px;
 
-   @include mq('md') {
-   }
+  @include mq("md") {
+  }
 }
 
 /*  重なり部分 */
-
-.button__more::before {
-  content: "";
+.button__squeare {
   position: absolute;
+  z-index: 0;
+  width: 202px;
+  height: 54px;
+  border: 1px solid $accent-color;
   top: 4px;
-  bottom: -4px;
-  right: -4px;
-  left: 4px;
-  border: solid 1px $accent-color;
-  z-index: 1;
-  transition: inherit; /* 親要素のトランジションを継承する */
+  left: calc(50% + 2px);
+  transform: translateX(-50%);
+  background: $white;
+  margin-right: 4px;
 }
+
+.button__more img{
+margin-left: rem(8);
+display: inline-block;
+vertical-align: middle;
+width: rem(40); // 矢印の幅を調整
+height: rem(6); // 矢印の高さを調整
+}
+
+
 
 .button__more svg {
   margin-left: rem(8);
-  display: inline-block; 
-  vertical-align: middle; 
-
-}
-
-.button__more:hover {
-  background: $white;
-  color: $accent-color;
+  display: inline-block;
+  vertical-align: middle;
+  width: rem(40); // 矢印の幅を調整
+  height: rem(6); // 矢印の高さを調整
 }
 
 .button__more:hover svg path {
-  stroke: $accent-color;/* ストロークの色を変更 */
+  stroke: $accent-color; /* ストロークの色を変更 */
+}
+
+/* スライド後  */
+.button__more.slide::after {
+  background: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+.button__more.slide:hover {
+  color: $accent-color;
+}
+.button__more.slide:hover::after {
+  transform: scale(1, 1);
 }

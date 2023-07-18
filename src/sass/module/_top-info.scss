@@ -2,10 +2,9 @@
 
 .top-info {
   padding-top: rem(80);
-  padding-bottom: rem(80);
+  padding-bottom: rem(76);
   background: #ddf0f1;
   @include mq("md") {
-
     padding-top: rem(100);
     padding-bottom: rem(100);
   }
@@ -36,7 +35,6 @@
 .top-info__image img {
   width: 100%;
   height: auto;
-
 }
 
 /* アニメーション */
@@ -56,7 +54,7 @@ div.top-info__image img {
 }
 
 .top-info__contents {
-  margin-top: rem(24);
+  margin-top: rem(26);
 
   @include mq("md") {
     width: calc(48% - 48px / 2);
@@ -83,6 +81,7 @@ div.top-info__image img {
   font-size: rem(16);
   line-height: calc(24 / 16);
   color: $green;
+  margin-top: rem(8);
 
   @include mq("md") {
     padding-top: rem(8);

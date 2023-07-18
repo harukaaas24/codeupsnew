@@ -2,7 +2,7 @@
 
 .top-contact {
   padding-top: rem(80);
-  padding-bottom: rem(100);
+  padding-bottom: rem(97.6);
   overflow-x: hidden;
 }
 
@@ -17,7 +17,7 @@
   width: rem(109);
   height: rem(50);
   right: 4vw;
-  margin-top: rem(-20);
+  margin-top: rem(-27.2);
 }
 // デコ sp
 .top-contact__deco-pc {
@@ -52,10 +52,8 @@
 
 .top-contact__logo {
   width: 100%;
-
   object-fit: cover;
   height: auto;
-  padding-bottom: rem(6);
   border-bottom: 1px solid $accent-color;
   text-align: center;
 }
@@ -78,12 +76,24 @@
   }
 }
 
+.top-contact__contact p:not(:last-child) {
+  display: inline-block;
+  margin-right: rem(6);
+
+  @include mq("md") {
+  }
+}
+
+.top-contact__contact p:not(:first-child):not(:last-child) {
+  margin-top: rem(4);
+}
+
 .top-contact__contact {
   text-align: center;
   color: $green;
   font-size: rem(16);
   line-height: calc(24 / 16);
-  padding-top: rem(16);
+  padding-top: rem(14.4);
 
   @include mq("md") {
     width: calc(50% - 21px / 2);
@@ -128,12 +138,14 @@
 
 .top-contact__link {
   text-align: center;
-  margin-top: rem(8);
+  margin-top: rem(6);
 }
 
 .top-contact__link a {
   color: $accent-color;
   display: inline-block;
+  letter-spacing: 0;
+  font-size:  rem(14);
 }
 
 .top-contact__button {
