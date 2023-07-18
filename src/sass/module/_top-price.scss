@@ -42,7 +42,17 @@
 .top-price__wrapper {
   @include mq("md") {
     width: calc(50% - 93px / 2);
+    position: relative;
   }
+}
+
+.top-price__deco-pc {
+  width: 30.34vw;
+  height: auto;
+  position: absolute;
+  left: -8vw;
+  bottom: -14vw;
+ 
 }
 
 .top-price__image-pc {
@@ -51,7 +61,23 @@
     aspect-ratio: 345/227;
     object-fit: cover;
     height: auto;
+    position: relative;
   }
+}
+
+div.top-price__image-pc div.color {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #408f95;
+}
+
+div.top-price__image-pc img {
+  display: block;
+  width: 100%;
 }
 
 .top-price__title {
@@ -103,6 +129,10 @@
 .top-price__button {
   text-align: center;
   margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }
 
 .colored-image {

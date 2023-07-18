@@ -23,7 +23,6 @@
 
 .pc-nav__item {
   height: inherit;
-
 }
 
 .pc-nav__item:first-child {
@@ -50,7 +49,7 @@
   text-transform: capitalize;
 }
 
-.pc-nav__item--faq a{
+.pc-nav__item--faq a {
   text-transform: uppercase;
 }
 
@@ -75,12 +74,15 @@
   transition: all 0.3s ease 0s;
 }
 
-.pc-nav__item a span:hover:after {
+
+.pc-nav__item a:hover span::after {
   background: $white;
 }
 
+
+
 // ホバー時に字を透過させない
-.pc-nav__item a:hover {
+.pc-nav__item a span:hover {
   opacity: 1;
   transition: 1s;
 }

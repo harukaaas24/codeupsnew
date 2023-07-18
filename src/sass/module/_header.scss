@@ -11,10 +11,14 @@
   // 動き
   transition: 1s;
 
-   @include mq('md') {  
+  @include mq("md") {
     height: rem(90);
+  }
+}
 
-   }
+.header.change-color {
+  background: #9A9A9A; //スクロールしたあとのヘッダー背景色
+  transition: 0.3s;
 }
 
 .header__inner {
@@ -39,10 +43,6 @@
     width: rem(133);
     height: rem(50);
   }
-}
-
-.header.change-color {
-  background: #9a9a9a; //スクロールしたあとのヘッダー背景色
 }
 
 

@@ -25,6 +25,8 @@
   aspect-ratio: 345 / 227;
   max-width: rem(600);
 
+  position: relative;
+
   @include mq("md") {
     width: calc(50% - 48px / 2);
   }
@@ -33,6 +35,23 @@
 .top-info__image img {
   width: 100%;
   height: auto;
+
+}
+
+/* アニメーション */
+div.top-info__image div.color {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #408f95;
+}
+
+div.top-info__image img {
+  display: block;
+  width: 100%;
 }
 
 .top-info__contents {
@@ -53,7 +72,7 @@
   border-bottom: 1px solid $accent-color;
 
   @include mq("md") {
-    font-size:  rem(24);
+    font-size: rem(24);
     line-height: 1;
     padding-bottom: rem(8);
   }
@@ -64,9 +83,9 @@
   line-height: calc(24 / 16);
   color: $green;
 
-   @include mq('md') {
+  @include mq("md") {
     padding-top: rem(8);
-   }
+  }
 }
 
 .top-info__button {

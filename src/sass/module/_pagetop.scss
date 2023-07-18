@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.pagetop {
+  display: none;
+  position: fixed;
+  bottom: rem(15);
+  right: rem(15);
+  width: rem(48);
+  height: rem(48);
+
+  @include mq("md") {
+    bottom: rem(20);
+    right: rem(20);
+    width: rem(80);
+    height: rem(80);
+  }
+}
+
+.pagetop a {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagetop a img {
+  width: 100%;
+  height: auto;
+
+  @include mq("md") {
+  }
+}

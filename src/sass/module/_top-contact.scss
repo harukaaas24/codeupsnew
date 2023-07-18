@@ -3,11 +3,29 @@
 .top-contact {
   padding-top: rem(80);
   padding-bottom: rem(100);
+  overflow-x: hidden;
 }
 
 .top-contact__inner.inner {
   padding-right: rem(40);
   padding-left: rem(40);
+}
+
+// デコ sp
+.top-contact__deco-sp {
+  position: absolute;
+  width: rem(109);
+  height: rem(50);
+  right: 4vw;
+  margin-top: rem(-20);
+}
+// デコ sp
+.top-contact__deco-pc {
+  position: absolute;
+  width: rem(301);
+  height: rem(138);
+  right: -8vw;
+  top: -2vw;
 }
 
 .top-contact__wrapper {
@@ -96,8 +114,7 @@
     background: $accent-color; /*線の色指定*/
     width: 1px; /*線の幅指定*/
     height: 61.444%; /*線の高さ指定*/
-    transform: translate(-50% , -50%);
-
+    transform: translate(-50%, -50%);
   }
 }
 

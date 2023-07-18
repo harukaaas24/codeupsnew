@@ -33,11 +33,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="./assets/jquery.inview.min.js"></script>
-  <script defer src="./assets/js/script.js"></script> -->
 </head>
 
 <body>
@@ -128,57 +124,61 @@
   </header>
 
   <main>
-    <!-- ローディング -->
-    <div class="loading-animation">
-      <!-- メインタイトル -->
-      <div class="loading-animation__title">
-        <h2 class="loading-animation__maintitle">DIVING</h2>
-        <p class="loading-animation__subtitle">into the ocean</p>
-      </div>
-      <!-- イメージ -->
-      <div class="loading-animation__image-container">
-        <div class="loading-animation__image">
-          <img src="./assets/images/common/mv1-sp.jpg" alt="">
-        </div>
-        <div class="loading-animation__image1">
-          <img src="./assets/images/common/loading-left.jpg" alt="ローディング">
-        </div>
-      </div>
-      <div class="loading-animation__image2">
-        <img src="./assets/images/common/loading-right.jpg" alt="ローディング">
-      </div>
-    </div>
 
-    <!-- スワイパー -->
-    <div class="swiper js-mv-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="swiper-img">
-            <picture class="">
-              <source srcset="./assets/images/common/mv2.jpg" media="(min-width: 768px)" />
-              <!-- 768px以上で表示する画像 -->
-              <img src="./assets/images/common/mv2-sp.jpg" alt="メインビュー1" />
-            </picture>
+    <div class="js-mv">
+      <!-- ローディング -->
+      <div class="loading-animation">
+        <!-- メインタイトル -->
+        <div class="loading-animation__title">
+          <h2 class="loading-animation__maintitle">DIVING</h2>
+          <p class="loading-animation__subtitle">into the ocean</p>
+        </div>
+        <!-- イメージ -->
+        <div class="loading-animation__image-container">
+          <div class="loading-animation__image">
+            <img src="./assets/images/common/mv1-sp.jpg" alt="">
+          </div>
+          <div class="loading-animation__image1">
+            <img src="./assets/images/common/loading-left.jpg" alt="ローディング">
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="swiper-img">
-            <picture class="">
-              <source srcset="./assets/images/common/mv3.jpg" media="(min-width: 768px)" />
-              <!-- 768px以上で表示する画像 -->
-              <img src="./assets/images/common/mv3-sp.jpg" alt="メインビュー2" />
-            </picture>
+        <div class="loading-animation__image2">
+          <img src="./assets/images/common/loading-right.jpg" alt="ローディング">
+        </div>
+      </div>
+
+      <!-- スワイパー -->
+      <div class="swiper js-mv-swiper ">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-img">
+              <picture class="">
+                <source srcset="./assets/images/common/mv2.jpg" media="(min-width: 768px)" />
+                <!-- 768px以上で表示する画像 -->
+                <img src="./assets/images/common/mv2-sp.jpg" alt="メインビュー1" />
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-img">
+              <picture class="">
+                <source srcset="./assets/images/common/mv3.jpg" media="(min-width: 768px)" />
+                <!-- 768px以上で表示する画像 -->
+                <img src="./assets/images/common/mv3-sp.jpg" alt="メインビュー2" />
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-img">
+              <picture class="">
+                <source srcset="./assets/images/common/mv4.jpg" media="(min-width: 768px)" />
+                <!-- 768px以上で表示する画像 -->
+                <img src="./assets/images/common/mv4-sp.jpg" alt="メインビュー3" />
+              </picture>
+            </div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="swiper-img">
-            <picture class="">
-              <source srcset="./assets/images/common/mv4.jpg" media="(min-width: 768px)" />
-              <!-- 768px以上で表示する画像 -->
-              <img src="./assets/images/common/mv4-sp.jpg" alt="メインビュー3" />
-            </picture>
-          </div>
-        </div>
+
       </div>
 
     </div>
@@ -495,7 +495,7 @@
     </section>
 
 
-    <section class="top-voice">
+    <section class="top-voice top-voice-margin">
       <div class="top-voice__inner inner">
         <!-- セクションタイトル -->
         <div class="section-header">
@@ -504,6 +504,11 @@
         </div>
 
         <div class="top-voice__wrapper">
+          <!-- デコ pc -->
+          <div class="top-voice__deco-pc u-desktop"><img src="./assets/images/common/voice-deco.png" alt="魚">
+          </div>
+
+
           <!-- voice card -->
           <div class="top-voice__item voice-card">
             <div class="voice-card__header">
@@ -548,7 +553,9 @@
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。</p>
           </div>
-
+          <!-- デコ pc -->
+          <div class="top-voice__deco2-pc u-desktop"><img src="./assets/images/common/voice-deco2.png" alt="タツノオトシゴ">
+          </div>
 
         </div>
         <!-- ボタン -->
@@ -561,8 +568,10 @@
 
       </div>
     </section>
-    <section class="top-price">
+    <section class="top-price top-price-margin">
       <div class="top-price__inner inner">
+
+
         <!-- セクションタイトル -->
         <div class="section-header">
           <p class="section-header__title">price</p>
@@ -616,6 +625,9 @@
               <dd class="top-price__price">¥32,000</dd>
             </dl>
 
+            <!-- デコ pc -->
+            <div class="top-price__deco-pc u-desktop"><img src="./assets/images/common/price-deco.png" alt="魚">
+            </div>
 
           </div>
 
@@ -624,6 +636,7 @@
           </div>
 
         </div>
+
         <!-- ボタン -->
         <div class="top-price__button button">
           <a href="#" class="button__more">View more<svg width="40" height="6" viewbox="0 0 42 8" fill="none"
@@ -632,12 +645,20 @@
             </svg></a>
         </div>
 
+
       </div>
     </section>
 
     <section class="top-contact">
       <div class="top-contact__inner inner">
+
         <div class="top-contact__wrapper">
+          <!-- デコ sp -->
+          <div class="top-contact__deco-sp u-mobile"><img src="./assets/images/common/contact-deco-sp.png" alt="魚">
+          </div>
+          <!-- デコ pc -->
+          <div class="top-contact__deco-pc u-desktop"><img src="./assets/images/common/contact-deco-pc.png" alt="魚">
+          </div>
           <div class="top-contact__left">
             <div class="top-contact__logo">
               <img src="./assets/images/common/logo-green.png" alt="CodeUps">
@@ -767,6 +788,13 @@
       Copyright&copy;2021 - 2023 CodeUps LLC. All Rights Reserved.
     </p>
   </footer>
+
+  <!-- スクロールトップ -->
+  <p class="pagetop">
+    <a href="#">
+      <img src="./assets/images/common/to-top.png" alt="">
+    </a>
+  </p>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

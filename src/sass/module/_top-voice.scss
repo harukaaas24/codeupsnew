@@ -1,18 +1,36 @@
 @use "global" as *;
 
-.voice-card {
-}
-
 .top-voice__wrapper {
   max-width: rem(345);
   width: 100%;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: rem(40);
 
   @include mq("md") {
     display: flex;
     justify-content: space-between;
     max-width: rem(1080);
+    position: relative;
   }
+}
+
+// デコ（魚）
+.top-voice__deco-pc {
+  width: 21.81111vw;
+  height: auto;
+  position: absolute;
+  left: -5vw;
+  top: -13vw;
+}
+
+// デコ（タツノオトシゴ）
+.top-voice__deco-pc2 {
+  width: 0.493vw;
+  height: auto;
+  position: absolute;
+  right: -10vw;
+  bottom: -25vw;
 }
 
 .top-voice__item:last-child {

@@ -1,11 +1,59 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
   //要素の取得とスピードの設定
-  var box = $(".voice-card__image"),
+  var box1 = $(".voice-card__image"),
+    speed = 700;
+  var box2 = $(".top-info__image"),
+    speed = 700;
+  var box3 = $(".top-price__image-pc"),
     speed = 700;
 
-  //.colorboxの付いた全ての要素に対して下記の処理を行う
-  box.each(function () {
+  // .colorboxの付いた全ての要素に対して下記の処理を行う
+  box1.each(function () {
+    $(this).append('<div class="color"></div>');
+    var color = $(this).find($(".color")),
+      image = $(this).find("img");
+    var counter = 0;
+
+    image.css("opacity", "0");
+    color.css("width", "0%");
+    //inviewを使って背景色が画面に現れたら処理をする
+    color.on("inview", function () {
+      if (counter == 0) {
+        $(this)
+          .delay(200)
+          .animate({ width: "100%" }, speed, function () {
+            image.css("opacity", "1");
+            $(this).css({ left: "0", right: "auto" });
+            $(this).animate({ width: "0%" }, speed);
+          });
+        counter = 1;
+      }
+    });
+  });
+  box2.each(function () {
+    $(this).append('<div class="color"></div>');
+    var color = $(this).find($(".color")),
+      image = $(this).find("img");
+    var counter = 0;
+
+    image.css("opacity", "0");
+    color.css("width", "0%");
+    //inviewを使って背景色が画面に現れたら処理をする
+    color.on("inview", function () {
+      if (counter == 0) {
+        $(this)
+          .delay(200)
+          .animate({ width: "100%" }, speed, function () {
+            image.css("opacity", "1");
+            $(this).css({ left: "0", right: "auto" });
+            $(this).animate({ width: "0%" }, speed);
+          });
+        counter = 1;
+      }
+    });
+  });
+  box3.each(function () {
     $(this).append('<div class="color"></div>');
     var color = $(this).find($(".color")),
       image = $(this).find("img");
@@ -28,27 +76,31 @@ jQuery(function ($) {
     });
   });
 
-  // // ページトップボタンの表示
-  // var topBtn = $('.pagetop');
-  // topBtn.hide();
+  // ページトップボタンの表示
+  var topBtn = $(".pagetop");
+  topBtn.hide();
 
-  // $(window).scroll(function () {
-  //   if ($(this).scrollTop() > 200) {
-  //     // 指定70px以上のスクロールでボタンを表示
-  //     topBtn.fadeIn();
-  //   } else {
-  //     // 画面が指定70pxより上ならボタンを非表示
-  //     topBtn.fadeOut();
-  //   }
-  // });
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      // 指定70px以上のスクロールでボタンを表示
+      topBtn.fadeIn();
+    } else {
+      // 画面が指定70pxより上ならボタンを非表示
+      topBtn.fadeOut();
+    }
+  });
 
-  // ボタンをクリックしたらスクロールして上に戻る
-  // topBtn.click(function () {
-  //   $('body,html').animate({
-  //     scrollTop: 0
-  //   }, 300, 'swing');
-  //   return false;
-  // });
+  // ボタンをクリックしたらスクロールして上に戻る;
+  topBtn.click(function () {
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      300,
+      "swing"
+    );
+    return false;
+  });
 
   //ナビバートグル
   $(".js-hamburger").on("click", function () {
@@ -82,15 +134,15 @@ jQuery(function ($) {
 
   //スクロールでヘッダーの色が変わる
 
-  // $(function () {
-  //   $(window).on("scroll", function () {
-  //     if ($(".mainview").height() < $(this).scrollTop()) {
-  //       $(".js-header").addClass("change-color");
-  //     } else {
-  //       $(".js-header").removeClass("change-color");
-  //     }
-  //   });
-  // });
+  $(function () {
+    $(window).on("scroll", function () {
+      if ($(".js-mv").height() < $(this).scrollTop()) {
+        $(".js-header").addClass("change-color");
+      } else {
+        $(".js-header").removeClass("change-color");
+      }
+    });
+  });
 
   //ローディングアニメーション
 
