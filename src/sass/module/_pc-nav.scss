@@ -29,6 +29,10 @@
   padding-left: 0;
 }
 
+.pc-nav__item:nth-child(3) {
+  letter-spacing: 0.05em;
+}
+
 .pc-nav__item:last-child {
   padding-right: 0;
 }
@@ -46,7 +50,6 @@
   line-height: 1;
   position: relative;
   font-family: $title-font-family;
-  text-transform: capitalize;
 }
 
 .pc-nav__item--faq a {
@@ -74,12 +77,9 @@
   transition: all 0.3s ease 0s;
 }
 
-
 .pc-nav__item a:hover span::after {
   background: $white;
 }
-
-
 
 // ホバー時に字を透過させない
 .pc-nav__item a span:hover {

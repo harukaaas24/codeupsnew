@@ -32,6 +32,12 @@
   padding-right: rem(16);
   padding-bottom: rem(24);
   padding-left: rem(16);
+
+  @include mq("md") {
+    padding-top: rem(22.4);
+
+    padding-bottom: rem(40);
+  }
 }
 
 .campaign-card__title {
@@ -48,12 +54,21 @@
   border-top: 1px solid $accent-color;
   padding-right: rem(19);
   padding-left: rem(18);
+
+  @include mq("md") {
+    padding-top: rem(17.8);
+  }
 }
 
 .campaign-card__text {
   font-size: rem(14);
   font-weight: $regular;
   text-align: center;
+
+  @include mq("md") {
+    letter-spacing: 0.12em;
+    margin-right: 1rem;
+  }
 }
 
 .campaign-card__discount {
@@ -62,6 +77,12 @@
   font-weight: $bold;
   display: inline-block;
   padding-top: rem(8);
+  font-family: "Lato", sans-serif;
+
+  @include mq("md") {
+    padding-top: rem(10);
+    font-size: rem(24);
+  }
 }
 
 .campaign-card__price {
@@ -69,6 +90,18 @@
   justify-content: space-between;
   padding-top: rem(5);
   align-items: flex-end;
+
+  @include mq("md") {
+    justify-content: center;
+    gap: rem(24);
+  }
+}
+
+.campaign-card__price--left {
+  @include mq("md") {
+    justify-content: flex-start;
+    gap: rem(27);
+  }
 }
 
 span.del {
@@ -85,9 +118,20 @@ span.del {
   line-height: 1;
   color: $accent-color;
   display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-weight: $bold;
+
+  @include mq("md") {
+    font-size: rem(40);
+    letter-spacing: 0;
+  }
 }
 
 .campaign-card__button {
   text-align: center;
   margin-top: rem(36.8);
+
+   @include mq('md') {
+    margin-top: 4.6rem;
+   }
 }

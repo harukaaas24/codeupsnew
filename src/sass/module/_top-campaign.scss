@@ -3,13 +3,11 @@
   position: relative;
 }
 
-// .top-campaign__inner.inner {
 
-// }
 
 .top-campaign {
   margin-top: rem(40);
   @include mq("md") {
-    margin-top: rem(120);
+    margin-top: rem(118);
   }
 }

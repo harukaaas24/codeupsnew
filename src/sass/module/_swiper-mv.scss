@@ -1,15 +1,15 @@
 @use "global" as *;
 
 .swiper-mv {
-  // height: 100vh;
+  height: 100vh;
 }
 
 .swiper-mv.swiper-wrapper {
-  // height: 100vh;
+  height: 100vh;
 }
 
 .swiper-mv.swiper-wrapper.swiper-slide {
-  // height: 100vh;
+  height: 100vh;
 }
 
 @keyframes zoomUp {
@@ -27,6 +27,7 @@
 }
 
 .swiper-mv.swiper-wrapper .swiper-slide img {
-  height: auto;
+  height: 100%;
   width: 100%;
+  object-fit: cover;
 }

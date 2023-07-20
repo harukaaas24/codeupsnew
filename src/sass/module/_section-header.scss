@@ -60,6 +60,9 @@
   // text-align: center;
   padding-top: rem(4);
   font-weight: $regular;
+   @include mq('md') {
+   padding-top: rem(8);
+   }
 }
 
 .section-header__text--white {

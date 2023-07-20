@@ -122,15 +122,15 @@ jQuery(function ($) {
 
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
 
-  // $(document).on("click", 'a[href*="#"]', function () {
-  //   let time = 400;
-  //   let header = $("header").innerHeight();
-  //   let target = $(this.hash);
-  //   if (!target.length) return;
-  //   let targetY = target.offset().top - header;
-  //   $("html,body").animate({ scrollTop: targetY }, time, "swing");
-  //   return false;
-  // });
+  $(document).on("click", 'a[href*="#"]', function () {
+    let time = 400;
+    let header = $("header").innerHeight();
+    let target = $(this.hash);
+    if (!target.length) return;
+    let targetY = target.offset().top - header;
+    $("html,body").animate({ scrollTop: targetY }, time, "swing");
+    return false;
+  });
 
   //スクロールでヘッダーの色が変わる
 
@@ -146,15 +146,106 @@ jQuery(function ($) {
 
   //ローディングアニメーション
 
+  // $(document).ready(function () {
+  //   // タイトル要素の表示アニメーション
+  //   $(".loading-animation__title").addClass("fade-in");
+
+  //   // 左の画像要素の初期位置を設定
+  //   $(".loading-animation__image1").css({ top: "100%", opacity: "0" });
+
+  //   // 右の画像要素の初期位置を設定
+  //   $(".loading-animation__image2").css({ top: "100%", opacity: "0" });
+
+  //   // テキスト要素を一度非表示にする
+  //   $(".loading-animation__title").addClass("hidden");
+
+  //   // 左の画像要素の表示アニメーション
+  //   $(".loading-animation__image1")
+  //     .delay(3000)
+  //     .animate({ top: "0", opacity: "1" }, 500, function () {
+  //       // z-index の変更
+  //       $(this).css("z-index", "2");
+
+  //       // 右の画像要素の表示アニメーション
+  //       $(".loading-animation__image2")
+  //         .delay(1000) // 左の画像要素との遅延時間を調整
+  //         .animate({ top: "0", opacity: "1" }, 500, function () {
+  //           // z-index の変更
+  //           $(this).css("z-index", "2");
+
+  //           // テキスト要素を再表示する
+  //           $(".loading-animation__title")
+  //             .removeClass("hidden")
+  //             .css("z-index", "4");
+
+  //           // テキストの色変更
+  //           $(".loading-animation__maintitle").addClass("color-change");
+  //           $(".loading-animation__subtitle").addClass("color-change");
+
+  //           // テキストの再表示アニメーション
+  //           setTimeout(function () {
+  //             $(".loading-animation__title")
+  //               .delay(5000) // 遅延時間を追加（1秒）
+  //               .queue(function (next) {
+  //                 $(this).addClass("fade-in");
+  //                 next();
+  //               })
+  //               .css("transition", "opacity 3s ease"); // フェードインのアニメーションを適用
+  //           }, 2000);
+  //         });
+  //     });
+
+  //   // 10秒後にローディングアニメーションを非表示にする
+  //   setTimeout(function () {
+  //     $(".loading-animation").fadeOut();
+  //   }, 10000);
+  // });
+
+  // /* ローディングアニメーションが消えたらスワイパー表示 */
+  // $(document).ready(function () {
+  //   // スワイパーを非表示にする
+  //   $(".js-mv-swiper").hide();
+
+  //   // ローディングアニメーションの表示
+  //   $(".loading-animation").show();
+
+  //   // ローディングアニメーションの非表示化
+  //   setTimeout(function () {
+  //     $(".loading-animation").fadeOut(function () {
+  //       // ローディングアニメーションが完全に非表示になった後にスワイパーを表示する
+  //       $(".js-mv-swiper").show();
+
+  //       // スワイパーの初期化と更新
+  //       var mvSwiper = new Swiper(".js-mv-swiper", {
+  //         loop: true,
+  //         effect: "fade", // フェード切り替え
+  //         // 自動再生
+  //         autoplay: {
+  //           delay: 4000, // 4秒後に次のスライドへ
+  //           disableOnInteraction: false, // ユーザーが操作しても自動再生を継続
+  //         },
+  //         speed: 2000, // 2秒かけてフェード
+  //         pagination: {
+  //           el: ".swiper-pagination",
+  //           clickable: true,
+  //         },
+  //       });
+
+  //       // .loading-animation__imageを非表示にする
+  //       $(".loading-animation__image").hide();
+  //     });
+  //   }, 5000); // ローディングアニメーションの表示時間（5秒）
+  // });
+
   $(document).ready(function () {
     // タイトル要素の表示アニメーション
     $(".loading-animation__title").addClass("fade-in");
 
     // 左の画像要素の初期位置を設定
-    $(".loading-animation__image1").css({ top: "100%", opacity: "0" });
+    $(".loading-animation__image1").css({ top: "0", opacity: "0" });
 
     // 右の画像要素の初期位置を設定
-    $(".loading-animation__image2").css({ top: "100%", opacity: "0" });
+    $(".loading-animation__image2").css({ top: "0", opacity: "0" });
 
     // テキスト要素を一度非表示にする
     $(".loading-animation__title").addClass("hidden");
@@ -233,6 +324,9 @@ jQuery(function ($) {
 
         // .loading-animation__imageを非表示にする
         $(".loading-animation__image").hide();
+
+        // ローディングアニメーションの表示位置を調整
+        $(".loading-animation").css("top", "0");
       });
     }, 5000); // ローディングアニメーションの表示時間（5秒）
   });
@@ -244,7 +338,7 @@ jQuery(function ($) {
     var scrollButtonPrev = $(".scroll-button-prev");
     var scrollButtonNext = $(".scroll-button-next");
 
-    // ボタンの表示/非表示を切り替える関数
+    // スクロールボタンの表示/非表示を切り替える関数
     function toggleScrollButtons() {
       var scrollLeft = cardContainer.scrollLeft();
       var maxScrollLeft =
@@ -253,20 +347,43 @@ jQuery(function ($) {
       scrollButtonNext.toggleClass("disabled", scrollLeft === maxScrollLeft);
     }
 
-    // スクロールボタンがクリックされた時の処理
+    // 左のスクロールボタンのクリックイベントリスナー
     scrollButtonPrev.on("click", function () {
-      if (!$(this).hasClass("disabled")) {
-        cardContainer.animate({ scrollLeft: "-=300" }, 500);
+      if (!scrollButtonPrev.hasClass("disabled")) {
+        var scrollAmount =
+          cardContainer.width() +
+          parseInt(cardContainer.css("padding-left")) +
+          parseInt(cardContainer.css("padding-right"));
+        var currentScrollLeft = cardContainer.scrollLeft();
+        cardContainer.animate(
+          { scrollLeft: currentScrollLeft - scrollAmount },
+          500
+        );
       }
     });
 
+    // // ボタンの表示/非表示を切り替える関数
+
     scrollButtonNext.on("click", function () {
       if (!$(this).hasClass("disabled")) {
-        cardContainer.animate({ scrollLeft: "+=300" }, 500);
+        var scrollAmount =
+          cardContainer.width() +
+          parseInt(cardContainer.css("padding-left")) +
+          parseInt(cardContainer.css("padding-right")); // スクロールする量をカードコンテナの幅とパディングの合計に設定する
+        var currentScrollLeft = cardContainer.scrollLeft();
+        cardContainer.animate(
+          { scrollLeft: currentScrollLeft + scrollAmount },
+          500
+        );
       }
     });
 
     // 初期表示時にボタンの表示/非表示を切り替える
     toggleScrollButtons();
+
+    // ウィンドウのリサイズ時にボタンの表示/非表示を切り替える
+    $(window).resize(function () {
+      toggleScrollButtons();
+    });
   });
 });
