@@ -21,16 +21,16 @@
 
   z-index: 1;
   @include mq("md") {
-    animation: slide-in 2s linear forwards;
+    // animation: slide-in 2s linear forwards;
 
-    opacity: 0;
-    transition: opacity 1s ease; // フェードインのアニメーションを設定
+    // opacity: 0;
+    // transition: opacity 1s ease; // フェードインのアニメーションを設定
   }
 }
 
 .loading-animation__title.fade-in {
   animation: fade-in 2s ease forwards;
-  opacity: 0; // アニメーション終了時に透明にする
+  // opacity: 0; // アニメーション終了時に透明にする
 }
 
 @keyframes fade-in {
@@ -42,14 +42,14 @@
   }
 }
 
-.loading-animation.fade-out {
-  opacity: 0;
-  transition: opacity 2s ease; // フェードアウトのアニメーションを設定
-}
+// .loading-animation.fade-out {
+//   opacity: 0;
+//   transition: opacity 2s ease; // フェードアウトのアニメーションを設定
+// }
 
 .loading-animation.fade-out .loading-animation__title {
-  opacity: 0; // フェードアウト時に透明にする
-  transition-delay: 0s; // 遅延時間を設定しない
+  // opacity: 0; // フェードアウト時に透明にする
+  // transition-delay: 0s; // 遅延時間を設定しない
 }
 
 .loading-animation__maintitle {
@@ -109,9 +109,6 @@
     height: 100vh;
 
     backface-visibility: hidden;
-
-    // 非表示
-    opacity: 1;
   }
 }
 
@@ -146,19 +143,28 @@
     height: 100%;
 
     backface-visibility: hidden;
-    // 非表示
-    opacity: 1;
   }
 }
 
-@keyframes slide-in {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-80px);
-  }
-}
+// @keyframes slide-in {
+//   0% {
+//     transform: translateY(0);
+//   }
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
+
+// @keyframes slide-in {
+//   from {
+//     transform: translateY(-100%); /* 要素を下の枠外に移動*/
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translateY(0); /* 要素を元の位置に移動*/
+//     opacity: 1;
+//   }
+// }
 
 .loading-animation__image2::after {
   content: "";
@@ -169,15 +175,7 @@
   // けした
   // height: 100%;
 
-  opacity: 0;
-  animation: fade-in 2s 2s linear forwards;
+  opacity: 1;
+  // animation: fade-in 2s 2s linear forwards;
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
