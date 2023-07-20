@@ -33,6 +33,10 @@
 .top-blog__inner.inner {
   width: 100%;
   max-width: rem(365);
+
+   @include mq('md') {
+    max-width:  rem(1130);
+   }
 }
 
 .top-blog__wrapper {
@@ -42,4 +46,15 @@
     justify-content: space-between;
     margin-top: rem(80);
   }
+}
+
+.top-blog__button {
+  margin-top: rem(39.68);
+  text-align: center;
+  position: relative; /* 追加 */
+
+
+   @include mq('md') {
+    margin-top: rem(80);
+   }
 }

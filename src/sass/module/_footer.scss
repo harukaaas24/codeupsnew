@@ -5,15 +5,15 @@
   color: $white;
   padding-top: rem(48);
   padding-bottom: rem(56);
-}
-
-
-.footer__inner.inner {
-  padding-left: rem(15);
-  padding-right: rem(15);
 
   @include mq("md") {
-    max-width: 1030px;
+    padding-top: rem(78.4);
+    padding-bottom: 5rem;
+  }
+}
+
+.footer__inner.inner {
+  @include mq("md") {
   }
 }
 
@@ -22,6 +22,7 @@
     display: flex;
     gap: rem(40);
     align-items: flex-end;
+    display: inline-block;
   }
 }
 
@@ -32,16 +33,21 @@
   @include mq("md") {
     width: rem(200);
     height: rem(75);
+    display: inline-block;
   }
 }
 
 .footer__sns {
   padding-top: rem(16);
+
+  @include mq("md") {
+    padding-top: 0;
+    margin-left: rem(36);
+  }
 }
 
 .footer__sp-nav {
   color: $white;
-
 
   @include mq("md") {
     display: flex;
@@ -53,9 +59,13 @@
   font-weight: $regular;
   line-height: calc(18 / 12);
   text-align: center;
+  font-family: $title-font-family;
 
   @include mq("md") {
     text-align: center;
+    margin-top: rem(75.2);
+    font-size: rem(14);
+    line-height: calc(18 / 14);
+    letter-spacing: 0.01em;
   }
 }
-

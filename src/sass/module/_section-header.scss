@@ -4,6 +4,12 @@
   text-align: center;
 }
 
+.section-header--lg {
+  @include mq("md") {
+    margin-top: rem(18);
+  }
+}
+
 .section-header--campaign {
 }
 
@@ -22,13 +28,14 @@
 
 .section-header__title--lg {
   line-height: 1;
-  margin: 0 -2.666vw;
+  // margin: 0 -2.666vw;
+
   max-width: rem(315);
   width: 100%;
-
+  text-align: center;
+  display: inline-block;
   @include mq("md") {
-    text-align: center;
-    display: inline-block;
+
   }
 }
 
@@ -60,9 +67,9 @@
   // text-align: center;
   padding-top: rem(4);
   font-weight: $regular;
-   @include mq('md') {
-   padding-top: rem(8);
-   }
+  @include mq("md") {
+    padding-top: rem(8);
+  }
 }
 
 .section-header__text--white {
@@ -75,4 +82,8 @@
   padding-top: 0;
   line-height: 1;
   margin-top: rem(-2);
+
+  @include mq("md") {
+    margin-top: rem(-10);
+  }
 }

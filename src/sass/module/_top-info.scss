@@ -11,7 +11,7 @@
 }
 
 .top-info__wrapper {
-  margin-top: rem(24);
+  margin-top: rem(27.2);
   @include mq("md") {
     display: flex;
     justify-content: space-between;
@@ -24,11 +24,11 @@
   width: 100%;
   aspect-ratio: 345 / 227;
   max-width: rem(600);
-
+  margin: 0 auto;
   position: relative;
 
   @include mq("md") {
-    width: calc(50% - 48px / 2);
+    width: 50%;
   }
 }
 
@@ -57,7 +57,7 @@ div.top-info__image img {
   margin-top: rem(26);
 
   @include mq("md") {
-    width: calc(48% - 48px / 2);
+    width: calc(50% - 48px);
     margin-top: 0;
   }
 }
@@ -84,7 +84,7 @@ div.top-info__image img {
   margin-top: rem(8);
 
   @include mq("md") {
-    padding-top: rem(8);
+    padding-top: 0;
   }
 }
 

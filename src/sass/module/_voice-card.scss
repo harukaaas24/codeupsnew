@@ -3,7 +3,7 @@
 .voice-card {
   max-width: rem(345);
   width: 100%;
-  padding-top: rem(15);
+  padding-top: rem(16);
   padding-right: rem(16);
   padding-left: rem(16);
   padding-bottom: rem(24);
@@ -12,6 +12,10 @@
 
   @include mq("md") {
     max-width: rem(520);
+    padding-top: rem(24);
+    padding-right: rem(24);
+    padding-left: rem(24);
+    padding-bottom: rem(24);
   }
 }
 
@@ -37,13 +41,17 @@
   @include mq("md") {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
   }
 }
 
 .voice-card__profile {
   font-size: rem(12);
   font-weight: $regular;
-  // line-height: calc(18 / 12);
+
+   @include mq('md') {
+     line-height: calc(18 / 12);
+   }
 }
 
 /* アニメーション  */
@@ -92,4 +100,8 @@ div.voice-card__image img {
   line-height: calc(24 / 16);
   color: $black;
   padding-top: rem(15);
+
+   @include mq('md') {
+    padding-top: rem(40);
+   }
 }

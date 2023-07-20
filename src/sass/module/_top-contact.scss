@@ -4,11 +4,21 @@
   padding-top: rem(80);
   padding-bottom: rem(97.6);
   overflow-x: hidden;
+
+  @include mq("md") {
+    padding-top: rem(140);
+    padding-bottom: rem(156);
+  }
 }
 
 .top-contact__inner.inner {
   padding-right: rem(40);
   padding-left: rem(40);
+
+  @include mq("md") {
+    padding-right: rem(25);
+    padding-left: rem(25);
+  }
 }
 
 // デコ sp
@@ -24,15 +34,15 @@
   position: absolute;
   width: rem(301);
   height: rem(138);
-  right: -8vw;
-  top: -2vw;
+  right: -9vw;
+  top: -3vw;
 }
 
 .top-contact__wrapper {
   @include mq("md") {
     display: flex;
+
     justify-content: space-between;
-    max-width: 1080px;
     width: 100%;
     padding-top: rem(80);
     padding-bottom: rem(80);
@@ -43,10 +53,14 @@
   }
 }
 
-.top-contact__left,
+.top-contact__left {
+  @include mq("md") {
+    width: calc(440 / 918 * 100%);
+  }
+}
 .top-contact__right {
   @include mq("md") {
-    width: calc(50% - 163px / 2);
+    width: calc(315 / 918 * 100%);
   }
 }
 
@@ -73,8 +87,11 @@
   @include mq("md") {
     display: flex;
     justify-content: space-between;
+    padding-top: rem(12.8);
   }
 }
+
+
 
 .top-contact__contact p:not(:last-child) {
   display: inline-block;
@@ -93,10 +110,11 @@
   color: $green;
   font-size: rem(16);
   line-height: calc(24 / 16);
-  padding-top: rem(14.4);
+  padding-top: rem(16);
 
   @include mq("md") {
-    width: calc(50% - 21px / 2);
+    width: calc(170 / 440 * 100%);
+    text-align: left;
   }
 }
 
@@ -108,7 +126,7 @@
   width: 100%;
 
   @include mq("md") {
-    width: calc(50% - 21px / 2);
+    width: calc(273 / 440 * 100%);
   }
 }
 
@@ -119,7 +137,7 @@
 .top-contact__line {
   @include mq("md") {
     position: absolute;
-    left: 50%; /*横位置の指定*/
+    left: 53%; /*横位置の指定*/
     top: 50%; /*縦位置の指定*/
     background: $accent-color; /*線の色指定*/
     width: 1px; /*線の幅指定*/
@@ -145,7 +163,7 @@
   color: $accent-color;
   display: inline-block;
   letter-spacing: 0;
-  font-size:  rem(14);
+  font-size: rem(14);
 }
 
 .top-contact__button {

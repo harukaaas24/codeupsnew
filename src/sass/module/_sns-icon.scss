@@ -1,22 +1,21 @@
 @use "global" as *;
 
+.sns-icon {
+  display: flex;
+  gap: rem(16);
 
-.sns-icon{
-display: flex;
-gap:  rem(16);
-
-   @include mq('md') {
-    gap:  rem(16);
-   }
+  @include mq("md") {
+    gap: rem(16);
+  }
 }
 
 .sns-icon__fb,
-.sns-icon__ig{
+.sns-icon__ig {
   width: rem(24);
-  height:  rem(24);
+  height: rem(24);
 
-   @include mq('md') {
+  @include mq("md") {
     width: rem(32);
-    height:  rem(32);
-   }
+    height: rem(32);
+  }
 }

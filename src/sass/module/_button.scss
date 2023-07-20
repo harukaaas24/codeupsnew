@@ -12,16 +12,17 @@
   display: inline-block;
   padding-top: rem(16);
   padding-bottom: rem(16);
+
   text-align: center;
   position: relative;
   transition: 0.3s ease-in-out;
-  width: rem(202);
+  width: 202px;
   background-color: $accent-color;
   border: 1px solid $accent-color;
   overflow: hidden;
   z-index: 1;
   margin-right: 4px;
-
+  height: 54px;
   @include mq("md") {
   }
 }
@@ -40,15 +41,13 @@
   margin-right: 4px;
 }
 
-.button__more img{
-margin-left: rem(8);
-display: inline-block;
-vertical-align: middle;
-width: rem(40); // 矢印の幅を調整
-height: rem(6); // 矢印の高さを調整
+.button__more img {
+  margin-left: rem(8);
+  display: inline-block;
+  vertical-align: middle;
+  width: rem(40); // 矢印の幅を調整
+  height: rem(6); // 矢印の高さを調整
 }
-
-
 
 .button__more svg {
   margin-left: rem(8);
@@ -75,6 +74,7 @@ height: rem(6); // 矢印の高さを調整
   transform-origin: left top;
   transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
   z-index: -1;
+  width: 202px;
 }
 .button__more.slide:hover {
   color: $accent-color;
