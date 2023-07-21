@@ -144,8 +144,11 @@ margin-top: 0;
 }
 
 .top-about__button {
-  margin-top: rem(39.68);
+  margin-top: rem(38.4);
   text-align: center;
   position: relative; /* 追加 */
   z-index: 10; /* 追加 */
+
+   @include mq('md') {
+   }
 }

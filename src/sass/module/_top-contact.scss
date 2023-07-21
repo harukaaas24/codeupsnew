@@ -7,7 +7,7 @@
 
   @include mq("md") {
     padding-top: rem(140);
-    padding-bottom: rem(156);
+    padding-bottom: rem(158.4);
   }
 }
 
@@ -70,6 +70,10 @@
   height: auto;
   border-bottom: 1px solid $accent-color;
   text-align: center;
+
+   @include mq('md') {
+    padding-bottom:  rem(1);
+   }
 }
 
 .top-contact__logo img {
@@ -87,15 +91,25 @@
   @include mq("md") {
     display: flex;
     justify-content: space-between;
-    padding-top: rem(12.8);
+    padding-top: rem(11.2);
   }
 }
 
 
 
+.top-contact__contact p:first-child {
+  display: inline-block;
+  padding-right:  rem(10);
+
+  @include mq("md") {
+    // メディアクエリのスタイルをここに追加
+  }
+}
+
+
 .top-contact__contact p:not(:last-child) {
   display: inline-block;
-  margin-right: rem(6);
+  margin-right: 0;
 
   @include mq("md") {
   }

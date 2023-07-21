@@ -2,7 +2,7 @@
 
 .top-info {
   padding-top: rem(80);
-  padding-bottom: rem(76);
+  padding-bottom: rem(78.4);
   background: #ddf0f1;
   @include mq("md") {
     padding-top: rem(100);
@@ -29,6 +29,7 @@
 
   @include mq("md") {
     width: 50%;
+    margin: 0;
   }
 }
 
@@ -54,7 +55,7 @@ div.top-info__image img {
 }
 
 .top-info__contents {
-  margin-top: rem(26);
+  margin-top: rem(24);
 
   @include mq("md") {
     width: calc(50% - 48px);

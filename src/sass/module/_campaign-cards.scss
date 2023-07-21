@@ -10,7 +10,9 @@
   padding-left: rem(0.8);
 
   @include mq("md") {
-    // margin-left: 12.5%;
+    scrollbar-width: none; /*Firefox対応のスクロールバー非表示コード*/
+    -moz-scrollbar: none; /* 古いバージョンのFirefox用 */
+   
     margin-top: rem(45.9);
   }
 }
