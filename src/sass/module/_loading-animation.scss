@@ -21,10 +21,10 @@
 
   z-index: 1;
   @include mq("md") {
-    // animation: slide-in 2s linear forwards;
+    top: 47%;
+    transform: translateY(0);
+    margin-left: rem(46);
 
-    // opacity: 0;
-    // transition: opacity 1s ease; // フェードインのアニメーションを設定
   }
 }
 
@@ -40,16 +40,6 @@
   100% {
     opacity: 1;
   }
-}
-
-// .loading-animation.fade-out {
-//   opacity: 0;
-//   transition: opacity 2s ease; // フェードアウトのアニメーションを設定
-// }
-
-.loading-animation.fade-out .loading-animation__title {
-  // opacity: 0; // フェードアウト時に透明にする
-  // transition-delay: 0s; // 遅延時間を設定しない
 }
 
 .loading-animation__maintitle {
@@ -146,36 +136,13 @@
   }
 }
 
-// @keyframes slide-in {
-//   0% {
-//     transform: translateY(0);
-//   }
-//   100% {
-//     transform: translateY(0);
-//   }
-// }
-
-// @keyframes slide-in {
-//   from {
-//     transform: translateY(-100%); /* 要素を下の枠外に移動*/
-//     opacity: 0;
-//   }
-//   to {
-//     transform: translateY(0); /* 要素を元の位置に移動*/
-//     opacity: 1;
-//   }
-// }
-
 .loading-animation__image2::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 50%;
-  // けした
-  // height: 100%;
 
   opacity: 1;
   // animation: fade-in 2s 2s linear forwards;
 }
-

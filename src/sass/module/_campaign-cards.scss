@@ -9,6 +9,11 @@
   padding-bottom: rem(2);
   padding-left: rem(0.8);
 
+  // overflow-x: auto; /* PCの場合はスクロールバーを表示 */
+  overflow-y: scroll; /* スマホの場合もスクロールができるようにする */
+  -webkit-overflow-scrolling: touch; /* スムーズなスクロールを有効にする（iOS向け） */
+
+  position: relative;
   @include mq("md") {
     scrollbar-width: none; /*Firefox対応のスクロールバー非表示コード*/
     -moz-scrollbar: none; /* 古いバージョンのFirefox用 */
@@ -16,6 +21,8 @@
     margin-top: rem(45.9);
   }
 }
+
+
 
 .campaign-cards__item {
   display: inline-block; /* カードを横並びに配置 */
@@ -26,16 +33,7 @@
   }
 }
 
-.campaign-cards {
-  overflow-x: auto; /* PCの場合はスクロールバーを表示 */
-  overflow-y: scroll; /* スマホの場合もスクロールができるようにする */
-  -webkit-overflow-scrolling: touch; /* スムーズなスクロールを有効にする（iOS向け） */
-  white-space: nowrap;
-  position: relative;
 
-  @include mq("md") {
-  }
-}
 
 .campaign-cards::-webkit-scrollbar {
   display: none; /* スクロールバーを非表示にする */
