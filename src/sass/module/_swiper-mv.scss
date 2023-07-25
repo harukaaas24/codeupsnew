@@ -1,16 +1,18 @@
 @use "global" as *;
 
+
+
 .swiper-mv {
-  height: 100vh;
+
 
 }
 
 .swiper-mv.swiper-wrapper {
-  // height: 100vh;
+  // height: 100%;
 }
 
 .swiper-mv.swiper-wrapper.swiper-slide {
-  // height: 100vh;
+  height: 100vh;
 }
 
 @keyframes zoomUp {
@@ -22,13 +24,13 @@
   }
 }
 
-.swiper-mv.swiper-wrapper.swiper-slide-active .swiper-mv-img,
+.swiper-mv.swiper-wrapper.swiper-slide-active.swiper-mv-img,
 .swiper-mv.swiper-wrapper.swiper-slide-duplicate-active .swiper-mv-img {
   animation: zoomUp 12s linear 0s normal both;
 }
 
 .swiper-mv.swiper-wrapper .swiper-slide img {
-  height: 100%;
+  height: auto;
   width: 100%;
   object-fit: cover;
 }

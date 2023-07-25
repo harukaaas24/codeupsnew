@@ -181,14 +181,14 @@ jQuery(function ($) {
     // 左の画像要素の表示アニメーション
     $(".loading-animation__image1")
       .delay(3000)
-      .animate({ top: "0", opacity: "1" }, 500, function () {
+      .animate({ top: "0", opacity: "1" }, 600, function () {
         // z-index の変更
         $(this).css("z-index", "2");
 
         // 右の画像要素の表示アニメーション
         $(".loading-animation__image2")
-          .delay(500) // 左の画像要素との遅延時間を調整
-          .animate({ top: "0", opacity: "1" }, 500, function () {
+          .delay(300) // 左の画像要素との遅延時間を調整
+          .animate({ top: "0", opacity: "1" }, 600, function () {
             // z-index の変更
             $(this).css("z-index", "2");
 
