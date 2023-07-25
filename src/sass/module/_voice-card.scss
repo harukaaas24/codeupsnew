@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .voice-card {
-  max-width: rem(345);
+  // max-width: rem(345);
   width: 100%;
   padding-top: rem(16);
   padding-right: rem(16);
@@ -22,7 +22,8 @@
 .voice-card__header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: stretch; /* アイテムの高さを隣接するアイテムに合わせる */
+
 
   @include mq("md") {
     gap: rem(16);
@@ -31,6 +32,10 @@
 
 .voice-card__contents {
   width: calc(50% - 13px / 2);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @include mq("md") {
     width: 100%;
@@ -49,9 +54,9 @@
   font-size: rem(12);
   font-weight: $regular;
 
-   @include mq('md') {
-     line-height: calc(18 / 12);
-   }
+  @include mq("md") {
+    line-height: calc(18 / 12);
+  }
 }
 
 /* アニメーション  */
@@ -101,7 +106,7 @@ div.voice-card__image img {
   color: $black;
   padding-top: rem(15);
 
-   @include mq('md') {
+  @include mq("md") {
     padding-top: rem(40);
-   }
+  }
 }

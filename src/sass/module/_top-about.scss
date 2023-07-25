@@ -3,13 +3,14 @@
 .top-about {
   @include mq("md") {
     padding-bottom: rem(134.4);
-    overflow: hidden;
+    // overflow: hidden;
   }
 }
 
 .top-about__wrapper {
   width: 100%;
   display: flex;
+
   position: relative;
   justify-content: space-between;
   margin-right: auto;
@@ -112,9 +113,11 @@
   width: 13.4777vw;
   height: auto;
   position: absolute;
-  right:  -6.8vw;
+  // right:  -6.8vw;
   bottom: -6.2vw;
   z-index: 5;
+
+  right:calc(50% - min(-6.8vw,540px));
 }
 
 .top-about__title {

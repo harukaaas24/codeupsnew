@@ -22,7 +22,12 @@
 
 .sp-nav.is-open {
   display: block;
+  animation: fadeIn 0.5s ease;
 }
+
+
+
+
 
 .sp-nav__items {
   padding-top: rem(100.8);
@@ -205,13 +210,6 @@
 }
 
 /*  footer */
-// .sp-nav__subitems--footer.sp-nav__subitems {
-//   padding-top: 2.2rem;
-
-//   @include mq("md") {
-//     padding-top: 0;
-//   }
-// }
 
 .sp-nav__subitems li {
   font-size: rem(16);
@@ -235,4 +233,13 @@
 
 .sp-nav__subitem:not(:first-child) {
   padding-top: rem(24);
+}
+
+// ホバー
+.sp-nav__subitem--footer:hover {
+  opacity: 0.8;
+}
+
+.footer-link:hover {
+  opacity: 0.8;
 }

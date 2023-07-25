@@ -19,7 +19,9 @@
   height: rem(2);
   width: 100%;
   background: $white;
-  transition: ease 0.3s;
+
+
+  transition:  0.5s; /* アニメーションのプロパティを指定 */
 }
 
 .hamburger span:nth-child(1) {
@@ -37,6 +39,7 @@
 /*is-OPEN時の動き*/
 .hamburger.is-open span {
   width: rem(40);
+  transition: .5s;       /* 動きを0.5秒かけて動かす */
 }
 
 .hamburger.is-open span:nth-child(1) {

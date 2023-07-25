@@ -9,7 +9,7 @@
   padding-bottom: rem(2);
   padding-left: rem(0.8);
 
-  // overflow-x: auto; /* PCの場合はスクロールバーを表示 */
+ 
   overflow-y: scroll; /* スマホの場合もスクロールができるようにする */
   -webkit-overflow-scrolling: touch; /* スムーズなスクロールを有効にする（iOS向け） */
 

@@ -72,14 +72,18 @@
   left: 0;
   width: 100%;
   height: rem(1);
-  // 透明のバーがついている
+  // // 透明のバーがついている
   background: transparent;
-  transition: all 0.3s ease 0s;
+
+  transition: all 0.3s;
+  transform: scale(0, 1); /*X方向0、Y方向1*/
+  transform-origin: center top; /*上部中央基点*/
 }
 
 .pc-nav__item a:hover span::after {
   background: $white;
- 
+
+  transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
 // ホバー時に字を透過させない

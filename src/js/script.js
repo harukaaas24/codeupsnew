@@ -103,21 +103,40 @@ jQuery(function ($) {
   });
 
   //ナビバートグル
-  $(".js-hamburger").on("click", function () {
-    if ($(".js-hamburger").hasClass("is-open")) {
-      // $('.js-drawer-menu').fadeOut('is-open');
-      $(".js-drawer-menu").removeClass("is-open");
-      $(this).removeClass("is-open");
-    } else {
-      $(".js-drawer-menu").addClass("is-open");
-      $(this).addClass("is-open");
-    }
-  });
+  // $(".js-hamburger").on("click", function () {
+  //   if ($(".js-hamburger").hasClass("is-open")) {
+  //     $(".js-drawer-menu").removeClass("is-open");
+  //     $(this).removeClass("is-open");
 
-  // グローバルナビメニューのリンクをクリックしたらページを閉じる
-  $(".sp-nav__item a").on("click", function () {
-    $(".js-hamburger").removeClass("is-open");
-    $(".js-drawer-menu").removeClass("is-open");
+  //   } else {
+  //     $(".js-drawer-menu").addClass("is-open");
+  //     $(this).addClass("is-open");
+  //   }
+  // });
+
+  // // グローバルナビメニューのリンクをクリックしたらページを閉じる
+  // $(".sp-nav__item a").on("click", function () {
+  //   $(".js-hamburger").removeClass("is-open");
+  //   $(".js-drawer-menu").removeClass("is-open");
+  // });
+
+  // JavaScript
+  $(document).ready(function () {
+    $(".js-hamburger").on("click", function () {
+      if ($(".js-hamburger").hasClass("is-open")) {
+        $(".js-drawer-menu").fadeOut(300); // フェードアウト（200ミリ秒）
+        $(this).removeClass("is-open");
+      } else {
+        $(".js-drawer-menu").fadeIn(300); // フェードイン（200ミリ秒）
+        $(this).addClass("is-open");
+      }
+    });
+
+    // グローバルナビメニューのリンクをクリックしたらページを閉じる
+    $(".sp-nav__item a").on("click", function () {
+      $(".js-hamburger").removeClass("is-open");
+      $(".js-drawer-menu").fadeOut(300); // フェードアウト（200ミリ秒）
+    });
   });
 
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
@@ -145,9 +164,6 @@ jQuery(function ($) {
   });
 
   //ローディングアニメーション
-
-
-
 
   $(document).ready(function () {
     // タイトル要素の表示アニメーション

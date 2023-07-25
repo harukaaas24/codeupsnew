@@ -3,7 +3,7 @@
 .top-contact {
   padding-top: rem(80);
   padding-bottom: rem(97.6);
-  overflow-x: hidden;
+ 
 
   @include mq("md") {
     padding-top: rem(140);
@@ -12,12 +12,12 @@
 }
 
 .top-contact__inner.inner {
-  padding-right: rem(40);
-  padding-left: rem(40);
+  // padding-right: rem(40);
+  // padding-left: rem(40);
 
   @include mq("md") {
-    padding-right: rem(25);
-    padding-left: rem(25);
+    // padding-right: rem(25);
+    // padding-left: rem(25);
   }
 }
 
@@ -34,8 +34,8 @@
   position: absolute;
   width: rem(301);
   height: rem(138);
-  right: -9vw;
   top: -3vw;
+  right:calc(50% - min(50vw,540px));
 }
 
 .top-contact__wrapper {

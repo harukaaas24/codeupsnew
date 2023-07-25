@@ -9,7 +9,7 @@
 
   position: relative;
   @include mq("md") {
-    height: 53.5555vw;
+    // height: 53.5555vw;
   }
 }
 
@@ -21,10 +21,9 @@
 
   z-index: 1;
   @include mq("md") {
-    top: 47%;
+    top: 30%;
     transform: translateY(0);
     margin-left: rem(46);
-
   }
 }
 
@@ -108,7 +107,7 @@
   display: none;
   @include mq("md") {
     display: block;
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
     aspect-ratio: 720/ 768;
     object-fit: cover;
