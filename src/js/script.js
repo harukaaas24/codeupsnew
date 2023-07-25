@@ -261,63 +261,29 @@ jQuery(function ($) {
 
   /* スクロールバーにボタンを表示  */
 
-  // $(document).ready(function () {
-  //   var cardContainer = $(".campaign-cards");
-  //   var scrollButtonPrev = $(".scroll-button-prev");
-  //   var scrollButtonNext = $(".scroll-button-next");
-
-    // スクロールボタンの表示/非表示を切り替える関数
-    // function toggleScrollButtons() {
-    //   var scrollLeft = cardContainer.scrollLeft();
-    //   var maxScrollLeft =
-    //     cardContainer[0].scrollWidth - cardContainer[0].clientWidth;
-    //   scrollButtonPrev.toggleClass("disabled", scrollLeft === 0);
-    //   scrollButtonNext.toggleClass("disabled", scrollLeft === maxScrollLeft);
-    // }
-
-    // 左のスクロールボタンのクリックイベントリスナー
-    // scrollButtonPrev.on("click", function () {
-    //   if (!scrollButtonPrev.hasClass("disabled")) {
-    //     var scrollAmount =
-    //       cardContainer.width() +
-    //       parseInt(cardContainer.css("padding-left")) +
-    //       parseInt(cardContainer.css("padding-right"));
-    //     var currentScrollLeft = cardContainer.scrollLeft();
-    //     cardContainer.animate(
-    //       { scrollLeft: currentScrollLeft - scrollAmount },
-    //       500
-    //     );
-    //   }
-    // });
-
-    // // ボタンの表示/非表示を切り替える関数
-
-    // scrollButtonNext.on("click", function () {
-    //   if (!$(this).hasClass("disabled")) {
-    //     var scrollAmount =
-    //       cardContainer.width() +
-    //       parseInt(cardContainer.css("padding-left")) +
-    //       parseInt(cardContainer.css("padding-right")); // スクロールする量をカードコンテナの幅とパディングの合計に設定する
-    //     var currentScrollLeft = cardContainer.scrollLeft();
-    //     cardContainer.animate(
-    //       { scrollLeft: currentScrollLeft + scrollAmount },
-    //       500
-    //     );
-    //   }
-    // });
-
-    // 初期表示時にボタンの表示/非表示を切り替える
-    // toggleScrollButtons();
-
-    // ウィンドウのリサイズ時にボタンの表示/非表示を切り替える
-  //   $(window).resize(function () {
-  //     toggleScrollButtons();
-  //   });
-  // });
-
-  const cpSwiper = new Swiper(".js-cp-swiper", {
+ 
+  const campaignSwiper = new Swiper(".js-cp-swiper", {
     loop: false,
+    spaceBetween: 24,
+    slidesPerView: "1",
+    speed: 2000,
+    loopAdditionalSlides: 2,
+    width: 280,
 
+ 
+    breakpoints: { //ブレークポイントの設定 小さい順に設定する！！
+      768: {
+        slidesPerView: "3.5",
+        spaceBetween: 40,
+        width: 1265.5,
+
+      },
+      1920: {
+        slidesPerView: "5",
+        spaceBetween: 40,
+        width: 1825,
+      },
+    },
     // 前後の矢印
     navigation: {
       nextEl: ".swiper-button-next",
