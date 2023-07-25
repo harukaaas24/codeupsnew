@@ -18,12 +18,25 @@
   width: auto;
 }
 
-
-.swiper-mv.swiper-wrapper.swiper-slide img {
-  /* 画像を100%の高さに合わせ、横幅は自動調整 */
+picture {
   height: 100%;
-  width: auto;
-  object-fit: cover;
-  object-position: center center;
+  display: inline-block;
+}
 
+// .swiper-mv.swiper-wrapper.swiper-slide.picture img {
+//   /* 画像を100%の高さに合わせ、横幅は自動調整 */
+//   height: 100%;
+//   width: auto;
+//   object-fit: cover;
+//   object-position: center center;
+// }
+
+.swiper-mv .swiper-slide {
+  height: 100%; /* 親要素の高さを100%に指定 */
+}
+
+.swiper-mv .swiper-slide img {
+  height: 100%; /* imgタグの高さを親要素に合わせる */
+  width: 100%; /* もし必要ならば、幅も100%に指定する */
+  object-fit: cover; /* 画像を親要素に合わせて表示する */
 }

@@ -10,9 +10,8 @@
   }
 }
 
-.swiper-cp.swiper-wrapper.swiper-slide {
-  // max-width:  rem(280);
-  // width:100%;
+.swiper-slide {
+  height: auto;
 
   @include mq("md") {
   }

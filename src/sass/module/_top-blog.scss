@@ -19,6 +19,7 @@
 .top-blog__bg::before {
   @include mq("md") {
     content: "";
+    max-height: 500px; /* 最大の高さを500pxに設定 */
     height: 34.7222vw;
     background-image: url(../../assets/images/common/blog-bg.jpg);
     background-position: center center;
@@ -32,19 +33,30 @@
 
 .top-blog__inner.inner {
   width: 100%;
-  // max-width: rem(365);
 
-   @include mq('md') {
-    max-width:  rem(1130);
-   }
+  @include mq("md") {
+    max-width: rem(1130);
+  }
 }
 
 .top-blog__wrapper {
   margin-top: rem(30);
   @include mq("md") {
     display: flex;
-    justify-content: space-between;
     margin-top: rem(80);
+    flex-wrap: wrap;
+  }
+}
+
+.top-blog__item:not(:nth-child(3n)) {
+  @include mq("md") {
+    margin-right: rem(40);
+  }
+}
+
+.top-blog__item:nth-of-type(n + 4) {
+  @include mq("md") {
+    margin-top: rem(40);
   }
 }
 
@@ -53,8 +65,7 @@
   text-align: center;
   position: relative; /* 追加 */
 
-
-   @include mq('md') {
+  @include mq("md") {
     margin-top: rem(80);
-   }
+  }
 }
