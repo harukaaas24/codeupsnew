@@ -1,36 +1,42 @@
 @use "global" as *;
 
-
-
 .swiper-mv {
-
-
+  /* スライダー全体の高さを100vhに設定 */
+  height: 100vh;
 }
-
 .swiper-mv.swiper-wrapper {
-  // height: 100%;
+  height: 100%;
+  width: auto;
 }
 
 .swiper-mv.swiper-wrapper.swiper-slide {
-  height: 100vh;
+  height: 100%;
+  /* フレックスボックスを使用してスライドを中央に配置 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
 }
 
-@keyframes zoomUp {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.2);
-  }
-}
+// @keyframes zoomUp {
+//   0% {
+//     transform: scale(1);
+//   }
+//   100% {
+//     transform: scale(1.2);
+//   }
+// }
 
-.swiper-mv.swiper-wrapper.swiper-slide-active.swiper-mv-img,
-.swiper-mv.swiper-wrapper.swiper-slide-duplicate-active .swiper-mv-img {
-  animation: zoomUp 12s linear 0s normal both;
-}
+// .swiper-mv.swiper-wrapper.swiper-slide-active,
+// .swiper-mv.swiper-wrapper.swiper-slide-duplicate-active {
+//   animation: zoomUp 12s linear 0s normal both;
+// }
 
-.swiper-mv.swiper-wrapper .swiper-slide img {
-  height: auto;
-  width: 100%;
+.swiper-mv.swiper-wrapper.swiper-slide img {
+  /* 画像を100%の高さに合わせ、横幅は自動調整 */
+  height: 100%;
+  width: auto;
   object-fit: cover;
+  object-position: center center;
+
 }
