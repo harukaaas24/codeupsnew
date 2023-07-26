@@ -21,19 +21,20 @@
 
 .blog-card__image {
   position: relative;
-  // max-width: rem(301);
   width: 100%;
   aspect-ratio: 301/ 201;
   object-fit: cover;
   height: auto;
 
   @include mq("md") {
+
   }
 }
 
 .blog-card__image img {
-  height: auto;
+  height: 100%;
   transition: opacity 0.3s ease;
+  width: 100%;
 }
 
 .blog-card__body {

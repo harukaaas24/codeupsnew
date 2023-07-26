@@ -48,15 +48,26 @@
   }
 }
 
-.top-blog__item:not(:nth-child(3n)) {
+
+
+.top-blog__item:nth-child(n + 2) {
+  margin-top: 40px;
   @include mq("md") {
-    margin-right: rem(40);
+    margin-top: 0;
+
   }
 }
 
-.top-blog__item:nth-of-type(n + 4) {
+.top-blog__item:nth-child(n + 4) {
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: 40px;
+  }
+}
+
+
+.top-blog__item:not(:nth-child(3n)) {
+  @include mq("md") {
+    margin-right: rem(40);
   }
 }
 

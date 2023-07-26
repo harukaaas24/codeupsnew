@@ -3,7 +3,6 @@
 .top-contact {
   padding-top: rem(80);
   padding-bottom: rem(97.6);
- 
 
   @include mq("md") {
     padding-top: rem(140);
@@ -35,7 +34,7 @@
   width: rem(301);
   height: rem(138);
   top: -3vw;
-  right:calc(50% - min(50vw,540px));
+  right: calc(50% - min(50vw, 540px));
 }
 
 .top-contact__wrapper {
@@ -71,9 +70,9 @@
   border-bottom: 1px solid $accent-color;
   text-align: center;
 
-   @include mq('md') {
-    padding-bottom:  rem(1);
-   }
+  @include mq("md") {
+    padding-bottom: rem(1);
+  }
 }
 
 .top-contact__logo img {
@@ -95,17 +94,13 @@
   }
 }
 
-
-
 .top-contact__contact p:first-child {
   display: inline-block;
-  padding-right:  rem(10);
+  padding-right: rem(10);
 
   @include mq("md") {
- 
   }
 }
-
 
 .top-contact__contact p:not(:last-child) {
   display: inline-block;
@@ -145,7 +140,8 @@
 }
 
 .top-contact__image img {
-  height: auto;
+  height: 100%;
+  width: 100%;
 }
 
 .top-contact__line {

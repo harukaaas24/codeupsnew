@@ -21,6 +21,7 @@
 picture {
   height: 100%;
   display: inline-block;
+  width: 100%;
 }
 
 // .swiper-mv.swiper-wrapper.swiper-slide.picture img {
@@ -39,4 +40,5 @@ picture {
   height: 100%; /* imgタグの高さを親要素に合わせる */
   width: 100%; /* もし必要ならば、幅も100%に指定する */
   object-fit: cover; /* 画像を親要素に合わせて表示する */
+  object-position: center center;
 }

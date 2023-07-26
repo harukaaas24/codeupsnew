@@ -48,11 +48,13 @@
   }
 }
 
+/* デコ  */
 .top-price__deco-pc {
+  max-width: rem(437);
   width: 30.34vw;
   height: auto;
   position: absolute;
-  left:calc(50% - min(50vw,160px));
+  left: calc(50% - min(50vw, 160px));
   bottom: -12vw;
 }
 
@@ -79,6 +81,7 @@ div.top-price__image-pc div.color {
 div.top-price__image-pc img {
   display: block;
   width: 100%;
+  height: 100%;
 }
 
 .top-price__title {
