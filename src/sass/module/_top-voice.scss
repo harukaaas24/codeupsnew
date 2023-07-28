@@ -1,19 +1,15 @@
 @use "global" as *;
 
 .top-voice__wrapper {
-  // max-width: rem(345);
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
+  // width: 100%;
+  // margin-right: auto;
+  // margin-left: auto;
   margin-top: rem(43.2);
 
   @include mq("md") {
-    display: flex;
-    justify-content: space-between;
-    max-width: rem(1080);
-    position: relative;
+
     margin-top: rem(30.4);
-    flex-wrap: wrap;
+    position: relative;
   }
 }
 
@@ -37,19 +33,7 @@
   right: calc(50% - min(47vw, 540px));
 }
 
-.top-voice__item:nth-child(n + 3) {
-  margin-top: rem(40);
 
-  @include mq("md") {
-    margin-top: 0;
-  }
-}
-
-.top-voice__item:nth-child(n + 4) {
-  @include mq("md") {
-    margin-top: rem(40);
-  }
-}
 
 .top-voice__button {
   margin-top: rem(39.68);

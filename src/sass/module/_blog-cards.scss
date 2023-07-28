@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.blog-cards{
+   @include mq('md') {
+    display: flex;
+    flex-wrap: wrap;
+   }
+}
+
+
+.blog-cards__item:nth-child(n + 2) {
+  margin-top: 41px;
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.blog-cards__item:nth-child(n + 4) {
+  @include mq("md") {
+    margin-top: 40px;
+  }
+}
+
+.blog-cards__item:not(:nth-child(3n)) {
+  @include mq("md") {
+    margin-right: rem(40);
+  }
+}
