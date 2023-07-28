@@ -181,13 +181,16 @@ jQuery(function ($) {
     // 左の画像要素の表示アニメーション
     $(".loading-animation__image1")
       .delay(3000)
-      .animate({ top: "0", opacity: "1" }, 600, function () {
+      .animate({ top: "0", opacity: "1" }, 600,
+      
+  
+      function () {
         // z-index の変更
         $(this).css("z-index", "2");
 
         // 右の画像要素の表示アニメーション
         $(".loading-animation__image2")
-          .delay(300) // 左の画像要素との遅延時間を調整
+          // .delay(100) // 左の画像要素との遅延時間を調整
           .animate({ top: "0", opacity: "1" }, 600, function () {
             // z-index の変更
             $(this).css("z-index", "2");
@@ -210,7 +213,7 @@ jQuery(function ($) {
                   next();
                 })
                 .css("transition", "opacity 3s ease"); // フェードインのアニメーションを適用
-            }, 2000);
+            }, 2400);
           });
       });
 
@@ -269,15 +272,12 @@ jQuery(function ($) {
     loopAdditionalSlides: 2,
     width: 280,
 
-  
-
- 
-    breakpoints: { //ブレークポイントの設定 小さい順に設定する！！
+    breakpoints: {
+      //ブレークポイントの設定 小さい順に設定する！！
       768: {
         slidesPerView: "3.5",
         spaceBetween: 40,
         width: 1265.5,
-
       },
       1920: {
         slidesPerView: "5",
