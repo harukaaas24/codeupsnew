@@ -22,8 +22,7 @@
 
   z-index: 1;
   @include mq("md") {
-    top: 30%;
-    transform: translateY(0);
+
     margin-left: rem(46);
   }
 }
@@ -75,21 +74,30 @@
 
 .loading-animation__image-container {
   width: 100%;
+  height: 100%;
 
   @include mq("md") {
     position: relative;
     background-color: $white;
     display: flex;
-    height: 100%;
+
   }
 }
 
 // スマホイメージ
 .loading-animation__image {
   height: 100%;
+  width: 100%;
   @include mq("md") {
     display: none;
   }
+}
+
+.loading-animation__image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .loading-animation__image1 {

@@ -259,9 +259,8 @@ jQuery(function ($) {
     }, 5000); // ローディングアニメーションの表示時間（5秒）
   });
 
-  /* スクロールバーにボタンを表示  */
+  /* CPのスライダー  */
 
- 
   const campaignSwiper = new Swiper(".js-cp-swiper", {
     loop: false,
     spaceBetween: 24,
@@ -269,6 +268,8 @@ jQuery(function ($) {
     speed: 2000,
     loopAdditionalSlides: 2,
     width: 280,
+
+  
 
  
     breakpoints: { //ブレークポイントの設定 小さい順に設定する！！

@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .top-voice__wrapper {
   // max-width: rem(345);
   width: 100%;
@@ -24,7 +23,7 @@
   height: auto;
   position: absolute;
   top: -15vw;
-  left:calc(50% - min(50vw,360px));
+  left: calc(50% - min(45vw, 620px));
 }
 
 // デコ（タツノオトシゴ）
@@ -32,9 +31,10 @@
   width: 4.93vw;
   height: auto;
   position: absolute;
+  max-width: rem(71);
 
-  bottom: -14vw;
-  right:calc(50% - min(50vw,540px));
+  bottom: max(-14.1vw, -220px);
+  right: calc(50% - min(47vw, 540px));
 }
 
 .top-voice__item:nth-child(n + 3) {
@@ -45,10 +45,10 @@
   }
 }
 
-.top-voice__item:nth-child(n + 4){
-   @include mq('md') {
+.top-voice__item:nth-child(n + 4) {
+  @include mq("md") {
     margin-top: rem(40);
-   }
+  }
 }
 
 .top-voice__button {

@@ -3,8 +3,8 @@
 .blog-card {
   // max-width: rem(333);
   width: 100%;
-  padding-top: rem(16);
-  padding-right: rem(16);
+  padding-top: rem(14);
+  padding-right: rem(17.6);
   padding-left: rem(16);
   padding-bottom: rem(24);
   display: inline-block;
@@ -16,6 +16,7 @@
   @include mq("md") {
     max-width: calc(33.333% - 40px * 2 / 3);
     width: 100%;
+    padding-top: rem(16);
   }
 }
 
@@ -27,7 +28,6 @@
   height: auto;
 
   @include mq("md") {
-
   }
 }
 

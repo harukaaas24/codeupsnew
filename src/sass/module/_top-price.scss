@@ -38,6 +38,7 @@
   @include mq("md") {
     display: flex;
     justify-content: space-between;
+    gap: rem(50);
   }
 }
 
@@ -54,14 +55,14 @@
   width: 30.34vw;
   height: auto;
   position: absolute;
-  left: calc(50% - min(50vw, 160px));
-  bottom: -12vw;
+  left: calc(50% - min(23vw, 326px));
+  bottom: max(-12vw, -174px);
 }
 
 .top-price__image-pc {
   @include mq("md") {
     width: calc(50% - 93px / 2);
-    aspect-ratio: 345/227;
+    aspect-ratio: 492/746;
     object-fit: cover;
     height: auto;
     position: relative;

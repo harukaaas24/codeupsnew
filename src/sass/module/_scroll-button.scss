@@ -4,8 +4,8 @@
 .scroll-button {
   display: none; /* 初期状態ではボタンを非表示にする */
   @include mq("md") {
-    width: rem(90);
-    height: rem(90);
+    width: rem(80);
+    height: rem(80);
     border: none;
 
 

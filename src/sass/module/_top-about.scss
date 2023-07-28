@@ -7,6 +7,12 @@
   }
 }
 
+.top-about__inner.inner {
+  @include mq("md") {
+    width: 78.4722vw;
+  }
+}
+
 .top-about__wrapper {
   width: 100%;
   display: flex;
@@ -15,7 +21,7 @@
   justify-content: space-between;
   margin-right: auto;
   margin-left: auto;
-  margin-top: rem(24);
+  margin-top: rem(25.6);
   @include mq("md") {
     display: inline-block;
     height: 45.9027vw;
@@ -33,6 +39,7 @@
   height: auto;
   z-index: 2;
   @include mq("md") {
+    width: 27.77777vw;
   }
 }
 
@@ -55,8 +62,7 @@
   z-index: 1;
   @include mq("md") {
     padding-top: rem(80);
-
-   
+    width: 61.1111vw;
   }
 }
 
@@ -109,15 +115,17 @@
 }
 
 // デコ
+
 .top-about__deco {
+  max-width: rem(194);
   width: 13.4777vw;
   height: auto;
   position: absolute;
-  // right:  -6.8vw;
-  bottom: -6.2vw;
+  bottom: min(-10vw, -92px);
+  // bottom: -6.2vw;
   z-index: 5;
 
-  right: calc(50% - min(-6.8vw, 540px));
+  right: calc(50% - min(37.3vw, 553px));
 }
 
 .top-about__title {
@@ -153,5 +161,6 @@
   z-index: 10; /* 追加 */
 
   @include mq("md") {
+    margin-top: rem(41.6);
   }
 }
