@@ -126,9 +126,14 @@ jQuery(function ($) {
       if ($(".js-hamburger").hasClass("is-open")) {
         $(".js-drawer-menu").fadeOut(300); // フェードアウト（200ミリ秒）
         $(this).removeClass("is-open");
+
+        $('.header__inner').removeClass('clicked'); // ヘッダーの背景色を元に戻すためにクラスを削除
+      
       } else {
         $(".js-drawer-menu").fadeIn(300); // フェードイン（200ミリ秒）
         $(this).addClass("is-open");
+     
+        $('.header__inner').addClass('clicked'); // ヘッダーの背景色を変更するためにクラスを追加
       }
     });
 
@@ -136,6 +141,8 @@ jQuery(function ($) {
     $(".sp-nav__item a").on("click", function () {
       $(".js-hamburger").removeClass("is-open");
       $(".js-drawer-menu").fadeOut(300); // フェードアウト（200ミリ秒）
+
+      $('.header__inner').removeClass('clicked'); // ヘッダーの背景色を元に戻す
     });
   });
 

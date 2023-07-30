@@ -9,21 +9,20 @@
 
   @include mq("md") {
     display: block;
-    max-width: rem(819);
-    width: 100%;
   }
 }
 
 .pc-nav__items {
   height: inherit;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  // align-items: center;
 }
 
 .pc-nav__item {
   height: inherit;
+
 }
+
 
 .pc-nav__item:first-child {
   padding-left: 0;
@@ -44,17 +43,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: rem(26) 0;
+
   font-size: rem(18);
-  line-height: 1;
+  justify-content: center; /* Align items vertically */
   position: relative;
   font-family: $title-font-family;
+  padding-left: rem(20);
+  padding-right: rem(20);
 }
 
-.pc-nav__item--faq a {
-  text-transform: uppercase;
+
+
+// 最後のaタグのみ右側の余白を除く
+.pc-nav__item:last-child a {
+  padding-right: 0;
 }
+
 
 .pc-nav__item a span {
   width: 100%;
@@ -83,7 +87,7 @@
 .pc-nav__item a:hover span::after {
   background: $white;
 
-  transform: scale(1, 1);/*X方向にスケール拡大*/
+  transform: scale(1, 1); /*X方向にスケール拡大*/
 }
 
 // ホバー時に字を透過させない

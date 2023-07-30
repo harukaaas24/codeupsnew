@@ -106,7 +106,7 @@
 
   @include mq("md") {
     letter-spacing: 0.12em;
-    margin-right: 1rem;
+    // margin-right: 1rem;
     margin-top: rem(17.6);
   }
 }
@@ -171,7 +171,7 @@ span.del {
 }
 
 .campaign-card__button {
-  text-align: center;
+  // text-align: center;
   margin-top: rem(36.8);
 
   @include mq("md") {

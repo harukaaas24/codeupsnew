@@ -1,7 +1,11 @@
 @use "global" as *;
 
-.button {
-  position: relative;
+// .button {
+//   position: relative;
+// }
+
+.button__more{
+
 }
 
 .button__more.slide {
@@ -28,7 +32,7 @@
 }
 
 /*  重なり部分 */
-.button__squeare {
+.button__more::before {
   position: absolute;
   z-index: 0;
   width: 202px;
