@@ -1,17 +1,14 @@
 @use "global" as *;
 
 .top-info {
-  padding-top: rem(80);
-  padding-bottom: rem(78.4);
   background: #ddf0f1;
   @include mq("md") {
-    padding-top: rem(100);
-    padding-bottom: rem(104);
+
   }
 }
 
 .top-info__wrapper {
-  margin-top: rem(27.2);
+  margin-top: rem(30.4);
   @include mq("md") {
     display: flex;
     justify-content: space-between;
@@ -58,7 +55,7 @@ div.top-info__image img {
   margin-top: rem(24);
 
   @include mq("md") {
-    width: calc(50% - 48px);
+    width: calc(50% - rem(48));
     margin-top: 0;
   }
 }

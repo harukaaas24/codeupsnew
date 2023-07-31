@@ -20,9 +20,7 @@
 
 .pc-nav__item {
   height: inherit;
-
 }
-
 
 .pc-nav__item:first-child {
   padding-left: 0;
@@ -52,13 +50,10 @@
   padding-right: rem(20);
 }
 
-
-
 // 最後のaタグのみ右側の余白を除く
 .pc-nav__item:last-child a {
   padding-right: 0;
 }
-
 
 .pc-nav__item a span {
   width: 100%;
@@ -67,6 +62,7 @@
   display: inline-block;
   position: relative;
   text-align: center;
+  white-space: nowrap;
 }
 
 .pc-nav__item a span:after {

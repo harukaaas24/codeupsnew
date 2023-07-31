@@ -60,14 +60,14 @@
 }
 
 .sp-nav__left {
-  width: calc(50% - 29px / 2);
+  width: calc(50% -  rem(29) / 2);
 
   @include mq("md") {
     width: 50%;
   }
 }
 .sp-nav__right {
-  width: calc(50% - 29px / 2);
+  width: calc(50% -  rem(29) / 2);
 
   @include mq("md") {
     width: 50%;

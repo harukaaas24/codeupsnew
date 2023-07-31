@@ -1,11 +1,9 @@
 @use "global" as *;
 
-// .button {
-//   position: relative;
-// }
+
 
 .button__more{
-
+  position: relative;
 }
 
 .button__more.slide {
@@ -20,29 +18,27 @@
   text-align: center;
   position: relative;
   transition: 0.3s ease-in-out;
-  width: 202px;
+  width:  rem(202);
   background-color: $accent-color;
-  border: 1px solid $accent-color;
-  overflow: hidden;
+
   z-index: 1;
-  margin-right: 4px;
-  // height: 54px;
+  margin-right:  rem(4);
+
   @include mq("md") {
   }
 }
 
 /*  重なり部分 */
 .button__more::before {
+  content: "";
   position: absolute;
-  z-index: 0;
-  width: 202px;
+  z-index: -1;
+  width:  rem(202);
   height:  rem(54);
   border: 1px solid $accent-color;
-  top: 4px;
-  left: calc(50% + 2px);
-  transform: translateX(-50%);
-  background: transparent;
-  margin-right: 4px;
+  top:  rem(4);
+  left:  rem(4);
+
 }
 
 .button__more img {
@@ -68,6 +64,7 @@
 /* スライド後  */
 .button__more.slide::after {
   background: $white;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -78,10 +75,12 @@
   transform-origin: left top;
   transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
   z-index: -1;
-  width: 202px;
+  width:  rem(202);
+  border: 1px solid $accent-color;
 }
 .button__more.slide:hover {
   color: $accent-color;
+
 
 }
 .button__more.slide:hover::after {

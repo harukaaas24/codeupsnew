@@ -95,7 +95,7 @@
   content: "";
   width: 90%;
   background-color: $accent-color;
-  height: 1px;
+  height:  rem(1);
 }
 
 .campaign-card__text {
@@ -150,7 +150,7 @@
 span.del {
   text-decoration: line-through solid #c94800;
   display: inline-block;
-  background-size: 100% 3px; /* 斜線の高さを指定 */
+  background-size: 100%  rem(3); /* 斜線の高さを指定 */
   background-position: 0 100%; /* 斜線の位置を下部に指定 */
   background-repeat: no-repeat; /* 斜線の繰り返しを無効化 */
   line-height: 1;
@@ -171,7 +171,8 @@ span.del {
 }
 
 .campaign-card__button {
-  // text-align: center;
+
+  text-align: center;  //ボタンの位置調整用
   margin-top: rem(36.8);
 
   @include mq("md") {

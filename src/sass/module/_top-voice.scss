@@ -1,14 +1,12 @@
 @use "global" as *;
 
 .top-voice__wrapper {
-  // width: 100%;
-  // margin-right: auto;
-  // margin-left: auto;
+
   margin-top: rem(43.2);
 
   @include mq("md") {
 
-    margin-top: rem(30.4);
+    margin-top: rem(35.2);
     position: relative;
   }
 }
@@ -19,7 +17,7 @@
   height: auto;
   position: absolute;
   top: -15vw;
-  left: calc(50% - min(45vw, 620px));
+  left: calc(50% - min(45vw, rem(620)));
 }
 
 // デコ（タツノオトシゴ）
@@ -29,8 +27,8 @@
   position: absolute;
   max-width: rem(71);
 
-  bottom: max(-14.1vw, -220px);
-  right: calc(50% - min(47vw, 540px));
+  bottom: max(-14.1vw, rem(-220));
+  right: calc(50% - min(47vw, rem(540)));
 }
 
 

@@ -1,13 +1,10 @@
 @use "global" as *;
 
 .top-price {
-  padding-top: rem(80);
-  padding-bottom: rem(79);
   background: #ddf0f1;
 
   @include mq("md") {
-    padding-top: rem(97.6);
-    padding-bottom: rem(96);
+
   }
 }
 
@@ -25,7 +22,7 @@
   aspect-ratio: 345/227;
   object-fit: cover;
   height: auto;
-  margin-top: rem(26);
+  margin-top: rem(28.8);
 }
 
 .top-price__image-sp img {
@@ -44,7 +41,7 @@
 
 .top-price__wrapper {
   @include mq("md") {
-    width: calc(50% - 93px / 2);
+    width: calc(50% -  rem(93) / 2);
     position: relative;
   }
 }
@@ -55,13 +52,13 @@
   width: 30.34vw;
   height: auto;
   position: absolute;
-  left: calc(50% - min(23vw, 326px));
-  bottom: max(-12vw, -174px);
+  left: calc(50% - min(23vw,  rem(326)));
+  bottom: max(-12vw,  rem(-174));
 }
 
 .top-price__image-pc {
   @include mq("md") {
-    width: calc(50% - 93px / 2);
+    width: calc(50% -  rem(93) / 2);
     aspect-ratio: 492/746;
     object-fit: cover;
     height: auto;
