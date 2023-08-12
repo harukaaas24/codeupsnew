@@ -24,9 +24,7 @@
 // spナビでスクロールしても文字が被らない
 .header__inner.clicked {
   background-color: $accent-color; // 背景色を$accent-colorに設定
-
 }
-
 
 .header__inner {
   height: inherit;
@@ -35,9 +33,9 @@
   justify-content: space-between;
   align-items: center;
   z-index: 9998;
-  // background: $accent-color;
+
   @include mq("md") {
-    padding: 0 rem(40);
+    padding: 0 rem(20) 0 rem(40);
   }
 }
 

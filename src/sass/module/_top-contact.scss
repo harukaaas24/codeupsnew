@@ -1,9 +1,32 @@
 @use "global" as *;
 
 .top-contact {
-
+position: relative;
 
 }
+
+ /* あしらい  */
+ .top-contact::after{
+  content: "";
+  width: rem(109);
+  height: rem(50);
+  top: 0;
+  right: 4vw;
+  margin-top: rem(-27.2);
+  background: url(../images/common/contact-deco-sp.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+
+  @include mq("md") {
+    width:  rem(301);
+    height: 138px;
+    bottom: 0;
+    // background: url(../images/common/contact-deco-pc.png);
+
+  }
+ }
+
 
 .top-contact__inner.inner {
 
@@ -14,21 +37,21 @@
 }
 
 // デコ sp
-.top-contact__deco-sp {
-  position: absolute;
-  width: rem(109);
-  height: rem(50);
-  right: 4vw;
-  margin-top: rem(-27.2);
-}
+// .top-contact__deco-sp {
+//   position: absolute;
+//   width: rem(109);
+//   height: rem(50);
+//   right: 4vw;
+//   margin-top: rem(-27.2);
+// }
 // デコ sp
-.top-contact__deco-pc {
-  position: absolute;
-  width: rem(301);
-  height: rem(138);
-  top: -2.8vw;
-  right: calc(50% - min(50vw,  rem(670)));
-}
+// .top-contact__deco-pc {
+//   position: absolute;
+//   width: rem(301);
+//   height: rem(138);
+//   top: -2.8vw;
+//   right: calc(50% - min(50vw,  rem(670)));
+// }
 
 .top-contact__wrapper {
   @include mq("md") {

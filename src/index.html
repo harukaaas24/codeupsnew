@@ -57,44 +57,44 @@
       <!-- spナビ -->
       <nav class="header__sp-nav sp-nav js-drawer-menu">
         <ul class="sp-nav__items">
-          <li class="sp-nav__left">
+          <li class="sp-nav__left sp-nav__left--drawer">
             <ul>
               <li class="sp-nav__item">
-                <a href="#">キャンペーン</a>
+                <a href="#" class="nav-link">キャンペーン</a>
                 <ul class="sp-nav__subitems">
                   <li class="sp-nav__subitem">ライセンス取得</li>
                   <li class="sp-nav__subitem">貸切体験ダイビング</li>
                   <li class="sp-nav__subitem">ナイトダイビング</li>
                 </ul>
               </li>
-              <li class="sp-nav__item"><a href="#">私たちについて</a></li>
+              <li class="sp-nav__item"><a href="#" class="nav-link">私たちについて</a></li>
               <li class="sp-nav__item">
-                <a href="#">ダイビング情報</a>
+                <a href="#" class="nav-link">ダイビング情報</a>
                 <ul class="sp-nav__subitems">
                   <li class="sp-nav__subitem">ライセンス講習</li>
                   <li class="sp-nav__subitem">体験ダイビング</li>
                   <li class="sp-nav__subitem">ファンダイビング</li>
                 </ul>
               </li>
-              <li class="sp-nav__item"><a href="#">ブログ</a></li>
+              <li class="sp-nav__item"><a href="#" class="nav-link">ブログ</a></li>
             </ul>
           </li>
-          <li class="sp-nav__right">
+          <li class="sp-nav__right sp-nav__right--drawer">
             <ul>
-              <li class="sp-nav__item"><a href="#">お客様の声</a></li>
-              <li class="sp-nav__item"><a href="#">料金一覧</a>
+              <li class="sp-nav__item"><a href="#" class="nav-link">お客様の声</a></li>
+              <li class="sp-nav__item"><a href="#" class="nav-link">料金一覧</a>
                 <ul class="sp-nav__subitems">
                   <li class="sp-nav__subitem">ライセンス講習</li>
                   <li class="sp-nav__subitem">体験ダイビング</li>
                   <li class="sp-nav__subitem">ファンダイビング</li>
                 </ul>
               </li>
-              <li class="sp-nav__item"><a href="#">よくある質問</a></li>
-              <li class="sp-nav__item"><a href="#">プライバシー<br>
+              <li class="sp-nav__item"><a href="#" class="nav-link">よくある質問</a></li>
+              <li class="sp-nav__item"><a href="#" class="nav-link">プライバシー<br>
                   ポリシー</a></li>
-              <li class="sp-nav__item"><a href="#">利用規約</a></li>
-              <li class="sp-nav__item"><a href="#">お問い合わせ</a></li>
-              <li class="sp-nav__item"><a href="#">サイトマップ</a></li>
+              <li class="sp-nav__item"><a href="#" class="nav-link">利用規約</a></li>
+              <li class="sp-nav__item"><a href="#" class="nav-link">お問い合わせ</a></li>
+              <li class="sp-nav__item"><a href="#" class="nav-link">サイトマップ</a></li>
             </ul>
           </li>
         </ul>
@@ -120,7 +120,7 @@
           <li class="pc-nav__item">
             <a href="#">Price<span>料金一覧</span></a>
           </li>
-          <li class="pc-nav__item pc-nav__item--faq">
+          <li class="pc-nav__item">
             <a href="#">FAQ<span>よくある質問</span></a>
           </li>
           <li class="pc-nav__item">
@@ -129,7 +129,9 @@
         </ul>
       </nav>
     </div>
+    
   </header>
+
 
   <main>
     <div class="top-mv">
@@ -340,21 +342,21 @@
 
         </div>
 
-      </div>
-      <!-- 前後の矢印 -->
-      <div class="top-campaign__prev swiper-button-prev scroll-button"><img src="./assets/images/common/scroll-prev.png"
-          alt="前へ"></div>
-      <div class="top-campaign__next swiper-button-next scroll-button"><img src="./assets/images/common/scroll-next.png"
-          alt="次へ"></div>
-      <!-- ボタン -->
-      <div class="campaign-card__button button">
-        <a href="#" class="button__more slide">View more<svg width="40" height="6" viewbox="0 0 42 8" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-          </svg></a>
 
-      </div>
+        <!-- 前後の矢印 -->
+        <div class="top-campaign__prev swiper-button-prev scroll-button"><img
+            src="./assets/images/common/scroll-prev.png" alt="前へ"></div>
+        <div class="top-campaign__next swiper-button-next scroll-button"><img
+            src="./assets/images/common/scroll-next.png" alt="次へ"></div>
+        <!-- ボタン -->
+        <div class="campaign-card__button button">
+          <a href="#" class="button__more slide">View more<svg width="40" height="6" viewbox="0 0 42 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></a>
 
+        </div>
+      </div>
     </section>
 
     <!-- About us -->
@@ -536,7 +538,7 @@
           </div>
         </a> -->
         </div>
-      </div>
+     
 
       <!-- ボタン -->
       <div class="top-blog__button button">
@@ -545,7 +547,7 @@
             <path d="M1 7H41L34 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
           </svg></a>
       </div>
-
+    </div>
     </section>
 
 
@@ -558,9 +560,6 @@
         </div>
 
         <div class="top-voice__wrapper voice-cards">
-          <!-- デコ pc -->
-          <div class="top-voice__deco-pc u-desktop"><img src="./assets/images/common/voice-deco.png" alt="魚">
-          </div>
 
           <!-- voice card -->
           <div class="voice-cards__item top-voice__item voice-card">
@@ -634,9 +633,7 @@
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。</p>
           </div> -->
-          <!-- デコ pc -->
-          <div class="top-voice__deco2-pc u-desktop"><img src="./assets/images/common/voice-deco2.png" alt="タツノオトシゴ">
-          </div>
+     
 
         </div>
         <!-- ボタン -->
@@ -706,9 +703,7 @@
               <dd class="top-price__price">¥32,000</dd>
             </dl>
 
-            <!-- デコ pc -->
-            <div class="top-price__deco-pc u-desktop"><img src="./assets/images/common/price-deco.png" alt="魚">
-            </div>
+        
 
           </div>
 
@@ -736,11 +731,11 @@
 
         <div class="top-contact__wrapper">
           <!-- デコ sp -->
-          <div class="top-contact__deco-sp u-mobile"><img src="./assets/images/common/contact-deco-sp.png" alt="魚">
-          </div>
+          <!-- <div class="top-contact__deco-sp u-mobile"><img src="./assets/images/common/contact-deco-sp.png" alt="魚">
+          </div> -->
           <!-- デコ pc -->
-          <div class="top-contact__deco-pc u-desktop"><img src="./assets/images/common/contact-deco-pc.png" alt="魚">
-          </div>
+          <!-- <div class="top-contact__deco-pc u-desktop"><img src="./assets/images/common/contact-deco-pc.png" alt="魚">
+          </div> -->
           <div class="top-contact__left">
             <div class="top-contact__logo">
               <img src="./assets/images/common/logo-green.png" alt="CodeUps">
@@ -753,7 +748,10 @@
                 <p>定休日:毎週火曜日</p><br>
               </div>
               <div class="top-contact__image">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.9840673304884!2d127.69934044974941!3d26.229707230158024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56be7db5cbe23%3A0x90ba6df02740ef48!2z44CSOTAyLTAwNjEg5rKW57iE55yM6YKj6KaH5biC5Y-k5bO277yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1691393875974!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.9840673304884!2d127.69934044974941!3d26.229707230158024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56be7db5cbe23%3A0x90ba6df02740ef48!2z44CSOTAyLTAwNjEg5rKW57iE55yM6YKj6KaH5biC5Y-k5bO277yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1691393875974!5m2!1sja!2sjp"
+                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>
@@ -809,53 +807,53 @@
           <div class="sp-nav__left sp-nav__left--footer">
             <div class="sp-nav__left-pc1">
               <div class="sp-nav__item">
-                <a href="#" class="footer-link">キャンペーン</a>
+                <a href="#" class="nav-link">キャンペーン</a>
                 <div class="sp-nav__subitems sp-nav__subitems--footer">
-                  <p class="sp-nav__subitem sp-nav__subitem--footer">ライセンス取得</p>
-                  <p class="sp-nav__subitem sp-nav__subitem--footer">貸切体験ダイビング</p>
-                  <p class="sp-nav__subitem sp-nav__subitem--footer">ナイトダイビング</p>
+                  <a href="#" class="sp-nav__subitem sp-nav__subitem--footer">ライセンス取得</a>
+                  <a href="#" class="sp-nav__subitem sp-nav__subitem--footer">貸切体験ダイビング</a>
+                  <a href="#" class="sp-nav__subitem sp-nav__subitem--footer">ナイトダイビング</a>
                 </div>
               </div>
-              <div class="sp-nav__item"><a href="#" class="footer-link">私たちについて</a></div>
+              <div class="sp-nav__item"><a href="#" class="nav-link">私たちについて</a></div>
             </div>
             <div class="sp-nav__left-pc2">
               <div class="sp-nav__item">
-                <a href="#" class="footer-link">ダイビング情報</a>
+                <a href="#" class="nav-link">ダイビング情報</a>
                 <div class="sp-nav__subitems sp-nav__subitems--footer">
-                  <p class="sp-nav__subitem sp-nav__subitem--footer">ライセンス講習</p>
-                  <p class="sp-nav__subitem sp-nav__subitem--footer">体験ダイビング</p>
-                  <p class="sp-nav__subitem sp-nav__subitem--footer">ファンダイビング</p>
+                  <a href="#" class="sp-nav__subitem sp-nav__subitem--footer">ライセンス講習</a>
+                  <a href="#" class="sp-nav__subitem sp-nav__subitem--footer">体験ダイビング</a>
+                  <a href="#" class="sp-nav__subitem sp-nav__subitem--footer">ファンダイビング</a>
                 </div>
               </div>
-              <div class="sp-nav__item"><a href="#" class="footer-link">ブログ</a></div>
+              <div class="sp-nav__item"><a href="#" class="nav-link">ブログ</a></div>
             </div>
           </div>
           <div class="sp-nav__right sp-nav__right--footer">
             <div class="sp-nav__right-pc1">
-              <div class="sp-nav__item"><a href="#" class="footer-link">お客様の声</a></div>
-              <div class="sp-nav__item"><a href="#" class="footer-link">料金一覧</a>
+              <div class="sp-nav__item"><a href="#" class="nav-link">お客様の声</a></div>
+              <div class="sp-nav__item"><a href="#" class="nav-link">料金一覧</a>
                 <div class="sp-nav__subitems sp-nav__subitems--footer">
-                  <p class="sp-nav__subitem sp-nav__subitem--footer">ライセンス講習</p>
-                  <p class="sp-nav__subitem sp-nav__subitem--footer">体験ダイビング</p>
-                  <p class="sp-nav__subitem sp-nav__subitem--footer">ファンダイビング</p>
+                  <a href="#" class="sp-nav__subitem sp-nav__subitem--footer">ライセンス講習</a>
+                  <a href="#" class="sp-nav__subitem sp-nav__subitem--footer">体験ダイビング</a>
+                  <a href="#" class="sp-nav__subitem sp-nav__subitem--footer">ファンダイビング</a>
                 </div>
               </div>
             </div>
             <div class="sp-nav__right-pc2">
-              <div class="sp-nav__item"><a href="#" class="footer-link">よくある質問</a></div>
-              <div class="sp-nav__item"><a href="#" class="footer-link">プライバシー<br class="u-mobile">
+              <div class="sp-nav__item"><a href="#" class="nav-link">よくある質問</a></div>
+              <div class="sp-nav__item"><a href="#" class="nav-link">プライバシー<br class="u-mobile">
                   ポリシー</a></div>
-              <div class="sp-nav__item"><a href="#" class="footer-link">利用規約</a></div>
-              <div class="sp-nav__item"><a href="#" class="footer-link">お問い合わせ</a></div>
-              <div class="sp-nav__item"><a href="#" class="footer-link">サイトマップ</a></div>
+              <div class="sp-nav__item"><a href="#" class="nav-link">利用規約</a></div>
+              <div class="sp-nav__item"><a href="#" class="nav-link">お問い合わせ</a></div>
+              <div class="sp-nav__item"><a href="#" class="nav-link">サイトマップ</a></div>
             </div>
           </div>
         </div>
       </nav>
+      <p class="footer__copy-text">
+        Copyright&copy;2021 - 2023 CodeUps LLC. All Rights Reserved.
+      </p>
     </div>
-    <p class="footer__copy-text">
-      Copyright&copy;2021 - 2023 CodeUps LLC. All Rights Reserved.
-    </p>
   </footer>
 
   <!-- スクロールトップ -->

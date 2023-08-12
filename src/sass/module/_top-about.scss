@@ -31,6 +31,7 @@
   height: auto;
   z-index: 2;
   aspect-ratio: 128 / 194;
+  position: absolute;
   @include mq("md") {
   }
 }
@@ -42,16 +43,16 @@
 }
 
 .top-about__image2 {
-  position: absolute;
-  right: 0;
+  position: relative;
   aspect-ratio: 281 / 186;
   max-width: rem(880);
   width: 81%;
-  z-index: -1;
+  z-index: 1;
   top: rem(26);
+
+  margin-left: auto;
   @include mq("md") {
     padding-top: rem(80);
-
     top: 0;
     width: 100%;
     height: 100%;

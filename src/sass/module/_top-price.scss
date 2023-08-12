@@ -4,7 +4,7 @@
   background: #ddf0f1;
 
   @include mq("md") {
-
+    position: relative;
   }
 }
 
@@ -41,24 +41,30 @@
 
 .top-price__wrapper {
   @include mq("md") {
-    width: calc(50% -  rem(93) / 2);
+    width: calc(50% - rem(93) / 2);
     position: relative;
   }
 }
 
-/* デコ  */
-.top-price__deco-pc {
-  max-width: rem(437);
-  width: 30.34vw;
-  height: auto;
-  position: absolute;
-  left: calc(50% - min(23vw,  rem(326)));
-  bottom: max(-12vw,  rem(-174));
+/* あしらい  */
+.top-price::after {
+  @include mq("md") {
+    content: "";
+    width:  rem(437);
+    height: 201px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - min(48vw, rem(620)));
+    background: url(../images/common/price-deco.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
+
 
 .top-price__image-pc {
   @include mq("md") {
-    width: calc(50% -  rem(93) / 2);
+    width: calc(50% - rem(93) / 2);
     aspect-ratio: 492/746;
     object-fit: cover;
     height: auto;

@@ -1,11 +1,45 @@
 @use "global" as *;
 
-.top-voice__wrapper {
+// あしらい用
 
+.top-voice {
+  position: relative;
+}
+
+// 魚
+.top-voice::after {
+  @include mq("md") {
+    content: "";
+    width: 301px;
+    height: 138px;
+    position: absolute;
+    top: -10vw;
+    left: calc(50% - min(45vw, rem(620)));
+    background: url(../images/common/voice-deco.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+// タツノオトシゴ
+.top-voice__wrapper::after {
+  @include mq("md") {
+    position: absolute;
+    right: calc(50% - min(47vw, rem(540)));
+    width: 71px;
+    content: "";
+    background: url(../images/common/voice-deco2.png);
+    height: 162px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: min(-14.1vw, rem(-220));
+  }
+}
+
+.top-voice__wrapper {
   margin-top: rem(43.2);
 
   @include mq("md") {
-
     margin-top: rem(35.2);
     position: relative;
   }
@@ -21,17 +55,15 @@
 }
 
 // デコ（タツノオトシゴ）
-.top-voice__deco2-pc {
-  width: 4.93vw;
-  height: auto;
-  position: absolute;
-  max-width: rem(71);
+// .top-voice__deco2-pc {
+//   width: 4.93vw;
+//   height: auto;
+//   position: absolute;
+//   max-width: rem(71);
 
-  bottom: max(-14.1vw, rem(-220));
-  right: calc(50% - min(47vw, rem(540)));
-}
-
-
+//   bottom: max(-14.1vw, rem(-220));
+//   right: calc(50% - min(47vw, rem(540)));
+// }
 
 .top-voice__button {
   margin-top: rem(39.68);
