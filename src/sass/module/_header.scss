@@ -34,6 +34,8 @@
   align-items: center;
   z-index: 9998;
 
+
+
   @include mq("md") {
     padding: 0 rem(20) 0 rem(40);
   }

@@ -127,13 +127,14 @@ jQuery(function ($) {
         $(".js-drawer-menu").fadeOut(300); // フェードアウト（200ミリ秒）
         $(this).removeClass("is-open");
 
-        $('.header__inner').removeClass('clicked'); // ヘッダーの背景色を元に戻すためにクラスを削除
-      
+        $(".header__inner").removeClass("clicked"); // ヘッダーの背景色を元に戻すためにクラスを削除
+     
       } else {
         $(".js-drawer-menu").fadeIn(300); // フェードイン（200ミリ秒）
         $(this).addClass("is-open");
+
+        $(".header__inner").addClass("clicked"); // ヘッダーの背景色を変更するためにクラスを追加
      
-        $('.header__inner').addClass('clicked'); // ヘッダーの背景色を変更するためにクラスを追加
       }
     });
 
@@ -142,7 +143,7 @@ jQuery(function ($) {
       $(".js-hamburger").removeClass("is-open");
       $(".js-drawer-menu").fadeOut(300); // フェードアウト（200ミリ秒）
 
-      $('.header__inner').removeClass('clicked'); // ヘッダーの背景色を元に戻す
+      $(".header__inner").removeClass("clicked"); // ヘッダーの背景色を元に戻す
     });
   });
 
@@ -188,41 +189,43 @@ jQuery(function ($) {
     // 左の画像要素の表示アニメーション
     $(".loading-animation__image1")
       .delay(3000)
-      .animate({ top: "0", opacity: "1" }, 600,
-      
-  
-      function () {
-        // z-index の変更
-        $(this).css("z-index", "2");
+      .animate(
+        { top: "0", opacity: "1" },
+        600,
 
-        // 右の画像要素の表示アニメーション
-        $(".loading-animation__image2")
-          // .delay(100) // 左の画像要素との遅延時間を調整
-          .animate({ top: "0", opacity: "1" }, 600, function () {
-            // z-index の変更
-            $(this).css("z-index", "2");
+        function () {
+          // z-index の変更
+          $(this).css("z-index", "2");
 
-            // テキスト要素を再表示する
-            $(".loading-animation__title")
-              .removeClass("hidden")
-              .css("z-index", "4");
+          // 右の画像要素の表示アニメーション
+          $(".loading-animation__image2")
+            // .delay(100) // 左の画像要素との遅延時間を調整
+            .animate({ top: "0", opacity: "1" }, 600, function () {
+              // z-index の変更
+              $(this).css("z-index", "2");
 
-            // テキストの色変更
-            $(".loading-animation__maintitle").addClass("color-change");
-            $(".loading-animation__subtitle").addClass("color-change");
-
-            // テキストの再表示アニメーション
-            setTimeout(function () {
+              // テキスト要素を再表示する
               $(".loading-animation__title")
-                .delay(5000) // 遅延時間を追加（1秒）
-                .queue(function (next) {
-                  $(this).addClass("fade-in");
-                  next();
-                })
-                .css("transition", "opacity 3s ease"); // フェードインのアニメーションを適用
-            }, 2400);
-          });
-      });
+                .removeClass("hidden")
+                .css("z-index", "4");
+
+              // テキストの色変更
+              $(".loading-animation__maintitle").addClass("color-change");
+              $(".loading-animation__subtitle").addClass("color-change");
+
+              // テキストの再表示アニメーション
+              setTimeout(function () {
+                $(".loading-animation__title")
+                  .delay(5000) // 遅延時間を追加（1秒）
+                  .queue(function (next) {
+                    $(this).addClass("fade-in");
+                    next();
+                  })
+                  .css("transition", "opacity 3s ease"); // フェードインのアニメーションを適用
+              }, 2400);
+            });
+        }
+      );
 
     // 10秒後にローディングアニメーションを非表示にする
     setTimeout(function () {

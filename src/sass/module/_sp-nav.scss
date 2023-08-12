@@ -251,4 +251,12 @@
   opacity: 0.8;
 }
 
-
+/* スペースのスタイル */
+.sp-nav__space {
+  height: 20px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 30;
+  background: #408F95;;
+}
