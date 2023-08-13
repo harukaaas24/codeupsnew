@@ -17,14 +17,14 @@
 .loading-animation__title {
   opacity: 1;
   position: absolute;
-  top: 45%;
+  top: 43%;
   transform: translateY(-50%);
   left: 53%;
   transform: translateX(-50%);
 
   z-index: 1;
   @include mq("md") {
-    top: 45%;
+    top: 42%;
     left: 51.5%;
   }
 }

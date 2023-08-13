@@ -9,18 +9,22 @@
 
 // デコ
 
-.top-blog__deco {
-  max-width: rem(376.51);
-  width: 26.111vw;
-  height: auto;
-  position: absolute;
-  top: min(2vw, rem(100));
-  // bottom: -6.2vw;
-  z-index: 5;
-
-  left: calc(50% - min(45vw, rem(620)));
+.top-blog::after{
+  @include mq("md") {
+    content: "";
+    width:  rem(437);
+    height:  rem(201);
+    position: absolute;
+    top: 1.7vw;
+    left: calc(50% - min(45vw, rem(620)));
+    background: url(../images/common/blog-deco.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
+
+// 背景
 .top-blog::before {
   @include mq("md") {
     content: "";

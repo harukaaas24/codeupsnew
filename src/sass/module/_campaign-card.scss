@@ -5,10 +5,11 @@
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
 
   height: 100%;
-
+  background: #fff;
   //これを追加するとおかしくなる
-  // display: flex;
-  // flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; /* 幅を変更したくない要素に指定 */
   // justify-content: space-between;
 
   @include mq("md") {
@@ -29,16 +30,18 @@
 }
 
 .campaign-card__body {
-  // ここの指定をすることによってflexが効く
-  height: calc(100% -  rem(188));
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex: 1;
+  margin-top: 0;
+  padding: rem(16) rem(16) rem(24);
+  height: calc(100% - 15.486vw);
 
-   @include mq('md') {
-     height: calc(100% -  rem(223));
-   }
-
+  flex-shrink: 0; /* 幅を変更したくない要素に指定 */
+  @include mq("md") {
+    //  height: calc(100% -  rem(223));
+    padding: rem(24) rem(16) rem(40);
+  }
 }
 
 .campaign-card__image img {
@@ -46,10 +49,9 @@
   width: 100%;
 }
 
-.campaign-card__body-1 {
+.campaign-card__head {
   // padding-top: rem(16);
-  padding-right: rem(16);
-  padding-left: rem(16);
+  // padding-bottom: rem(8);
 
   @include mq("md") {
     // padding-top: rem(24);
@@ -57,10 +59,10 @@
 }
 
 .campaign-card__category {
-  margin-top: rem(16);
+  // margin-top: rem(16);
 
   @include mq("md") {
-    margin-top: rem(24);
+    // margin-top: rem(24);
   }
 }
 
@@ -76,38 +78,42 @@
   }
 }
 
-.campaign-card__body-2 {
-  padding-bottom: rem(25);
-  padding-left: rem(16);
-  padding-right: rem(16);
-  position: relative;
-  padding-top: rem(1);
-  margin-top: auto;
-  @include mq("md") {
-    // padding-bottom: rem(30.5);
-    // padding-top: rem(17.8);
-    padding-bottom: 0;
-  }
-}
+// .campaign-card__body-2 {
+//   padding-bottom: rem(25);
+//   padding-left: rem(16);
+//   padding-right: rem(16);
+//   position: relative;
+//   padding-top: rem(1);
+//   margin-top: auto;
+//   @include mq("md") {
+//     // padding-bottom: rem(30.5);
+//     // padding-top: rem(17.8);
+//     padding-bottom: 0;
+//   }
+// }
 
-.campaign-card__body-2::before {
-  position: absolute;
-  content: "";
-  width: 90%;
-  background-color: $accent-color;
-  height:  rem(1);
-}
+// .campaign-card__body-2::before {
+//   position: absolute;
+//   content: "";
+//   width: 90%;
+//   background-color: $accent-color;
+//   height: rem(1);
+// }
 
 .campaign-card__text {
   font-size: rem(14);
   font-weight: $regular;
   text-align: center;
-  margin-top: rem(8);
+  margin-top: auto;
+  padding-top: rem(16);
+  border-top: 1px solid $accent-color;
 
   @include mq("md") {
-    letter-spacing: 0.12em;
-    // margin-right: 1rem;
-    margin-top: rem(17.6);
+    // letter-spacing: 0.12em;
+    display: inline-block;
+    margin-left: rem(-11);
+
+    font-size: rem(16);
   }
 }
 
@@ -126,31 +132,28 @@
 }
 
 .campaign-card__price {
+  margin-top: rem(3.2);
   display: flex;
-  justify-content: space-between;
-  padding-top: rem(5);
   align-items: flex-end;
-  padding-right: rem(18);
-  padding-left: rem(18);
-
+  justify-content: center;
+  gap: rem(16);
   @include mq("md") {
-    justify-content: center;
+
     gap: rem(24);
-    padding-bottom: rem(40);
   }
 }
 
-.campaign-card__price--left {
-  @include mq("md") {
-    justify-content: flex-start;
-    gap: rem(27);
-  }
-}
+// .campaign-card__price--left {
+//   @include mq("md") {
+//     justify-content: flex-start;
+//     gap: rem(27);
+//   }
+// }
 
 span.del {
   text-decoration: line-through solid #c94800;
   display: inline-block;
-  background-size: 100%  rem(3); /* 斜線の高さを指定 */
+  background-size: 100% rem(3); /* 斜線の高さを指定 */
   background-position: 0 100%; /* 斜線の位置を下部に指定 */
   background-repeat: no-repeat; /* 斜線の繰り返しを無効化 */
   line-height: 1;
@@ -171,11 +174,10 @@ span.del {
 }
 
 .campaign-card__button {
-
-  text-align: center;  //ボタンの位置調整用
+  text-align: center; //ボタンの位置調整用
   margin-top: rem(36.8);
 
   @include mq("md") {
-    margin-top:  rem(75.2);
+    margin-top: rem(75.2);
   }
 }

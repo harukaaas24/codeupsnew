@@ -10,9 +10,9 @@ position: relative;
   content: "";
   width: rem(109);
   height: rem(50);
-  top: 0;
+  top: rem(-27.2);
   right: 4vw;
-  margin-top: rem(-27.2);
+  // margin-top: rem(-27.2);
   background: url(../images/common/contact-deco-sp.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -21,8 +21,9 @@ position: relative;
   @include mq("md") {
     width:  rem(301);
     height: 138px;
-    bottom: 0;
-    // background: url(../images/common/contact-deco-pc.png);
+
+    top: rem(-43.2);
+    right:3.6vw ;
 
   }
  }

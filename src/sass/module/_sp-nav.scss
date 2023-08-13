@@ -4,17 +4,16 @@
 ------------------------------------- */
 .sp-nav {
   position: fixed;
-  // top: 0;
+  top: 5rem;
   left: 0;
   right: 0;
   background-color: $accent-color;
   width: 100%;
-  // height: 100vh;
+  height: 100vh;
   z-index: 1;
   transition: ease 0.3s;
   display: none;
   color: $white;
-  top: 5rem;
 
   @include mq("md") {
     display: none;
@@ -27,7 +26,7 @@
 }
 
 .sp-nav__items {
-  padding-top: rem(100.8);
+  padding-top: rem(20.8);
   padding-bottom: rem(111);
   padding-left: rem(36.8);
   padding-right: rem(21.12);
@@ -35,13 +34,16 @@
   display: flex;
   justify-content: space-between;
 
-  // min-height: 600px;
   overflow-y: auto;
-  height: 100vh;
+  // height: 100vh;
   @include mq("md") {
     padding-top: rem(24);
     padding-bottom: rem(40);
   }
+}
+
+.sp-nav__items--sp {
+  height: 100vh;
 }
 
 .sp-nav__items--footer.sp-nav__items {
@@ -75,7 +77,6 @@
 }
 .sp-nav__right {
   width: calc(50% - rem(29) / 2);
-  min-height: 600px;
 
   @include mq("md") {
     width: 50%;
@@ -112,13 +113,14 @@
 .sp-nav__right-pc2 {
   @include mq("md") {
     display: inline-block;
+    width: 50%;
   }
 }
 
 .sp-nav__left-pc2 {
   padding-top: rem(32);
   @include mq("md") {
-    padding-left: rem(48);
+    padding-left: rem(24);
     padding-top: 0;
   }
 }
@@ -130,7 +132,7 @@
 .sp-nav__right-pc2 {
   padding-top: rem(33.6);
   @include mq("md") {
-    padding-left: rem(72);
+    padding-left: rem(32);
     padding-top: 0;
   }
 }
@@ -214,7 +216,7 @@
 
 .sp-nav__subitems {
   display: inline-block;
-  padding-top: rem(21.6);
+  padding-top: rem(19.2);
   width: 100%;
 }
 
@@ -239,7 +241,7 @@
 }
 
 .sp-nav__subitem:not(:first-child) {
-  padding-top: rem(24);
+  padding-top: rem(20.8);
 }
 
 // ホバー
@@ -258,5 +260,9 @@
   position: fixed;
   bottom: 0;
   z-index: 30;
-  background: #408F95;;
+  background: #408f95;
+
+  @include mq("md") {
+    display: none;
+  }
 }

@@ -103,38 +103,21 @@ jQuery(function ($) {
   });
 
   //ナビバートグル
-  // $(".js-hamburger").on("click", function () {
-  //   if ($(".js-hamburger").hasClass("is-open")) {
-  //     $(".js-drawer-menu").removeClass("is-open");
-  //     $(this).removeClass("is-open");
-
-  //   } else {
-  //     $(".js-drawer-menu").addClass("is-open");
-  //     $(this).addClass("is-open");
-  //   }
-  // });
-
-  // // グローバルナビメニューのリンクをクリックしたらページを閉じる
-  // $(".sp-nav__item a").on("click", function () {
-  //   $(".js-hamburger").removeClass("is-open");
-  //   $(".js-drawer-menu").removeClass("is-open");
-  // });
-
   // JavaScript
   $(document).ready(function () {
     $(".js-hamburger").on("click", function () {
       if ($(".js-hamburger").hasClass("is-open")) {
         $(".js-drawer-menu").fadeOut(300); // フェードアウト（200ミリ秒）
         $(this).removeClass("is-open");
-
         $(".header__inner").removeClass("clicked"); // ヘッダーの背景色を元に戻すためにクラスを削除
-     
+
+        $(".sp-nav__space").hide(); // .sp-nav__spaceを非表示にする
       } else {
         $(".js-drawer-menu").fadeIn(300); // フェードイン（200ミリ秒）
         $(this).addClass("is-open");
-
         $(".header__inner").addClass("clicked"); // ヘッダーの背景色を変更するためにクラスを追加
-     
+
+        $(".sp-nav__space").show(); // .sp-nav__spaceを表示する
       }
     });
 
